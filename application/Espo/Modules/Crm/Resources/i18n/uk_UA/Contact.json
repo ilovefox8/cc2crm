@@ -1,0 +1,36 @@
+{
+    "fields": {
+        "name": "Ім'я",
+        "emailAddress": "Емейл",
+        "title": "Посада",
+        "account": "Контраґент",
+        "accounts": "Контраґенти",
+        "phoneNumber": "Телефон",
+        "accountType": "Тип контраґента",
+        "doNotCall": "Не дзвонити",
+        "address": "Адреса",
+        "opportunityRole": "Роль угоди",
+        "accountRole": "Посада",
+        "description": "Опис",
+        "campaign": "Кампанія",
+        "targetLists": "Цільові списки",
+        "targetList": "Цільовий список"
+    },
+    "links": {
+        "opportunities": "Угоди",
+        "cases": "Кейси",
+        "targetLists": "Цільові списки",
+        "campaignLogRecords": "Журнал кампанія"
+    },
+    "labels": {
+        "Create Contact": "Створити контакт"
+    },
+    "options": {
+        "opportunityRole": {
+            "": "--Немає--",
+            "Decision Maker": "Приймає рішення",
+            "Evaluator": "Оцінювач",
+            "Influencer": "Впливає"
+        }
+    }
+}

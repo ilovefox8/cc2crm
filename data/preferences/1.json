@@ -1,0 +1,42 @@
+{
+    "id": "1",
+    "timeZone": "UTC",
+    "dateFormat": "MM\/DD\/YYYY",
+    "timeFormat": "HH:mm",
+    "weekStart": 0,
+    "thousandSeparator": ",",
+    "decimalMark": ".",
+    "defaultCurrency": "USD",
+    "dashboardLayout": [
+        {
+            "name": "My Espo",
+            "layout": [
+                [
+                    {
+                        "name": "Stream",
+                        "id": "d0004"
+                    },
+                    {
+                        "name": "Calls",
+                        "id": "d0001"
+                    }
+                ],
+                [
+                    {
+                        "name": "Tasks",
+                        "id": "d0003"
+                    },
+                    {
+                        "name": "Meetings",
+                        "id": "d0002"
+                    }
+                ]
+            ]
+        }
+    ],
+    "smtpPort": 25,
+    "smtpAuth": false,
+    "language": "en_US",
+    "exportDelimiter": ";",
+    "receiveAssignmentEmailNotifications": true
+}

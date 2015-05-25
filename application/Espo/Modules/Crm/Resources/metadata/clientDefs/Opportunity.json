@@ -1,0 +1,40 @@
+{
+   "controller": "Controllers.Record",
+   "views":{
+      "detail":"Crm:Opportunity.Detail"
+   },
+   "sidePanels":{
+      "detail":[
+         {
+            "name":"activities",
+            "label":"Activities",
+            "view":"Crm:Record.Panels.Activities"
+         },
+         {
+            "name":"history",
+            "label":"History",
+            "view":"Crm:Record.Panels.History"
+         },
+         {
+            "name":"tasks",
+            "label":"Tasks",
+            "view":"Crm:Record.Panels.Tasks"
+         }
+      ]
+   },
+   "filterList": [
+      {
+         "name":"open"
+      },
+      {
+         "name":"won",
+         "style": "success"
+      }
+   ],
+   "boolFilterList": ["onlyMy"],
+   "additionalLayouts": {
+      "detailConvert": {
+         "type": "detail"
+      }
+   }
+}

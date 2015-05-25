@@ -1,0 +1,91 @@
+{
+    "controller": "Controllers.Record",
+    "views":{
+        "detail":"Crm:Call.Detail"
+    },
+    "recordViews":{
+        "list":"Crm:Call.Record.List"
+    },
+    "menu": {
+        "detail": {
+            "actions": [
+                {
+                    "label": "Duplicate",
+                    "action": "duplicate",
+                    "acl": "edit"
+                }
+            ]
+        }
+    },
+    "sidePanels":{
+        "detail":[
+            {
+                "name":"attendees",
+                "label":"Attendees",
+                "view":"Record.Panels.Side",
+                "options":{
+                    "fieldList":[
+                        "users",
+                        "contacts",
+                        "leads"
+                    ]
+                }
+            }
+        ],
+        "detailSmall":[
+            {
+                "name":"attendees",
+                "label":"Attendees",
+                "view":"Record.Panels.Side",
+                "options":{
+                    "fieldList":[
+                        "users",
+                        "contacts",
+                        "leads"
+                    ]
+                }
+            }
+        ],
+        "edit":[
+            {
+                "name":"attendees",
+                "label":"Attendees",
+                "view":"Record.Panels.Side",
+                "options":{
+                    "fieldList":[
+                        "users",
+                        "contacts",
+                        "leads"
+                    ]
+                }
+            }
+        ],
+        "editSmall":[
+            {
+                "name":"attendees",
+                "label":"Attendees",
+                "view":"Record.Panels.Side",
+                "options":{
+                    "fieldList":[
+                        "users",
+                        "contacts",
+                        "leads"
+                    ]
+                }
+            }
+        ]
+    },
+    "filterList": [
+        {
+            "name":"planned"
+        },
+        {
+            "name":"held",
+            "style": "success"
+        },
+        {
+            "name":"todays"
+        }
+    ],
+    "boolFilterList": ["onlyMy"]
+}

@@ -1,0 +1,10 @@
+[
+    {
+        "label": "Configuration",
+        "rows": [
+            [{"name": "recordsPerPage"},{"name": "recordsPerPageSmall"}],
+            [{"name": "disableAvatars"},false],
+            [{"name": "tabList"},{"name": "quickCreateList"}]
+        ]
+    }
+]

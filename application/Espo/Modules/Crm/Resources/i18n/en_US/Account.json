@@ -1,0 +1,72 @@
+{
+    "fields": {
+        "name": "Name",
+        "emailAddress": "Email",
+        "website": "Website",
+        "phoneNumber": "Phone",
+        "billingAddress": "Billing Address",
+        "shippingAddress": "Shipping Address",
+        "description": "Description",
+        "sicCode": "Sic Code",
+        "industry": "Industry",
+        "type": "Type",
+        "contactRole": "Title",
+        "campaign": "Campaign"
+    },
+    "links": {
+        "contacts": "Contacts",
+        "opportunities": "Opportunities",
+        "cases": "Cases",
+        "documents": "Documents",
+        "meetingsPrimary": "Meetings (expanded)",
+        "callsPrimary": "Calls (expanded)",
+        "tasksPrimary": "Tasks (expanded)",
+        "emailsPrimary": "Emails (expanded)",
+        "targetLists": "Target Lists",
+        "campaignLogRecords": "Campaign Log"
+    },
+    "options": {
+        "type": {
+            "Customer": "Customer",
+            "Investor": "Investor",
+            "Partner": "Partner",
+            "Reseller": "Reseller"
+        },
+        "industry": {
+            "Agriculture": "Agriculture",
+            "Advertising": "Advertising",
+            "Apparel & Accessories": "Apparel & Accessories",
+            "Automotive": "Automotive",
+            "Banking": "Banking",
+            "Biotechnology": "Biotechnology",
+            "Chemical": "Chemical",
+            "Computer": "Computer",
+            "Education": "Education",
+            "Electronics": "Electronics",
+            "Entertainment & Leisure": "Entertainment & Leisure",
+            "Finance": "Finance",
+            "Food & Beverage": "Food & Beverage",
+            "Grocery": "Grocery",
+            "Insurance": "Insurance",
+            "Legal": "Legal",
+            "Publishing": "Publishing",
+            "Real Estate": "Real Estate",
+            "Service": "Service",
+            "Sports": "Sports",
+            "Software": "Software",
+            "Technology": "Technology",
+            "Telecommunications": "Telecommunications",
+            "Television": "Television",
+            "Transportation": "Transportation",
+            "Venture Capital": "Venture Capital"
+        }
+    },
+    "labels": {
+        "Create Account": "Create Account",
+        "Copy Billing": "Copy Billing"
+    },
+    "presetFilters": {
+        "customers": "Customers",
+        "partners": "Partners"
+    }
+}

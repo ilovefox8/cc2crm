@@ -1,0 +1,35 @@
+{
+    "fields": {
+        "name": "Name",
+        "status": "Status",
+        "host": "Host",
+        "username": "Username",
+        "password": "Password",
+        "port": "Port",
+        "monitoredFolders": "Monitored Folders",
+        "ssl": "SSL",
+        "fetchSince": "Fetch Since",
+        "emailAddress": "Email Address"
+    },
+    "links": {
+    },
+    "options": {
+        "status": {
+            "Active": "Active",
+            "Inactive": "Inactive"
+        }
+    },
+    "labels": {
+        "Create EmailAccount": "Create Email Account",
+        "IMAP": "IMAP",
+        "Main": "Main",
+        "Test Connection": "Test Connection"
+    },
+    "messages": {
+        "couldNotConnectToImap": "Could not connect to IMAP server",
+        "connectionIsOk": "Connection is Ok"
+    },
+    "tooltips": {
+        "monitoredFolders": "You can add 'Sent' folder to sync emails sent from external email client."
+    }
+}

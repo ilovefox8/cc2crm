@@ -1,0 +1,14 @@
+[
+	{
+		"label":"",
+		"rows":[
+			[{"name":"name"}],
+			[{"name":"status"}],
+			[{"name":"dateStart"}],
+			[{"name":"duration"}],
+			[{"name":"dateEnd"}],
+			[{"name":"parent"}],
+			[{"name":"description"}]
+		]
+	}
+]

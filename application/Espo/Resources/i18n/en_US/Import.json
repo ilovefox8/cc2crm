@@ -1,0 +1,30 @@
+{
+    "labels": {
+        "Revert Import": "Revert Import",
+        "Return to Import": "Return to Import",
+        "Run Import": "Run Import",
+        "Back": "Back",
+        "Field Mapping": "Field Mapping",
+        "Default Values": "Default Values",
+        "Add Field": "Add Field",
+        "Created": "Created",
+        "Updated": "Updated",
+        "Result": "Result",
+        "Show records": "Show records",
+        "Remove Duplicates": "Remove Duplicates",
+        "importedCount": "Imported (count)",
+        "duplicateCount": "Duplicates (count)",
+        "updatedCount": "Updated (count)"
+    },
+    "messages": {
+        "utf8": "Should be UTF-8 encoded",
+        "duplicatesRemoved": "Duplicates removed"
+    },
+    "fields": {
+        "file": "File",
+        "entityType": "Entity Type",
+        "imported": "Imported Records",
+        "duplicates": "Duplicate Records",
+        "updated": "Updated Records"
+    }
+}

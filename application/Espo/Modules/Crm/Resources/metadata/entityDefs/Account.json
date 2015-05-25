@@ -1,0 +1,250 @@
+{
+    "fields": {
+        "name": {
+            "type": "varchar",
+            "required": true
+        },
+        "website": {
+            "type": "url"
+        },
+        "emailAddress": {
+            "type": "email"
+        },
+        "phoneNumber": {
+            "type": "phone",
+            "typeList": ["Office", "Fax", "Other"],
+            "defaultType": "Office"
+        },
+        "type": {
+            "type": "enum",
+            "options": ["", "Customer", "Investor", "Partner", "Reseller"]
+        },
+        "industry": {
+            "type": "enum",
+            "options": [
+                "",
+                "Agriculture",
+                "Advertising",
+                "Apparel & Accessories",
+                "Automotive",
+                "Banking",
+                "Biotechnology",
+                "Chemical",
+                "Computer",
+                "Education",
+                "Electronics",
+                "Entertainment & Leisure",
+                "Finance",
+                "Food & Beverage",
+                "Grocery",
+                "Insurance",
+                "Legal",
+                "Publishing",
+                "Real Estate",
+                "Service",
+                "Sports",
+                "Sofware",
+                "Technology",
+                "Telecommunications",
+                "Television",
+                "Transportation",
+                "Venture Capital"
+            ]
+        },
+        "sicCode": {
+            "type": "varchar",
+            "maxLength": 40
+        },
+        "contactRole": {
+            "type": "varchar",
+            "notStorable": true,
+            "disabled": true
+        },
+        "billingAddress": {
+            "type": "address"
+        },
+        "billingAddressStreet": {
+            "type": "text",
+            "maxLength": 255,
+            "dbType": "varchar"
+        },
+        "billingAddressCity": {
+            "type": "varchar"
+        },
+        "billingAddressState": {
+            "type": "varchar"
+        },
+        "billingAddressCountry": {
+            "type": "varchar"
+        },
+        "billingAddressPostalCode": {
+            "type": "varchar"
+        },
+        "shippingAddress": {
+            "type": "address",
+            "view": "Crm:Account.Fields.ShippingAddress"
+        },
+        "shippingAddressStreet": {
+            "type": "text",
+            "maxLength": 255,
+            "dbType": "varchar"
+        },
+        "shippingAddressCity": {
+            "type": "varchar"
+        },
+        "shippingAddressState": {
+            "type": "varchar"
+        },
+        "shippingAddressCountry": {
+            "type": "varchar"
+        },
+        "shippingAddressPostalCode": {
+            "type": "varchar"
+        },
+        "description": {
+            "type": "text"
+        },
+        "campaign": {
+            "type": "link",
+            "layoutListDisabled": true
+        },
+        "createdAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "modifiedAt": {
+            "type": "datetime",
+            "readOnly": true
+        },
+        "createdBy": {
+            "type": "link",
+            "readOnly": true
+        },
+        "modifiedBy": {
+            "type": "link",
+            "readOnly": true
+        },
+        "assignedUser": {
+            "type": "link"
+        },
+        "teams": {
+            "type": "linkMultiple"
+        }
+    },
+    "links": {
+        "createdBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "modifiedBy": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "assignedUser": {
+            "type": "belongsTo",
+            "entity": "User"
+        },
+        "teams": {
+            "type": "hasMany",
+            "entity": "Team",
+            "relationName": "entityTeam",
+            "layoutRelationshipsDisabled": true
+        },
+        "contacts": {
+            "type": "hasMany",
+            "entity": "Contact",
+            "foreign": "accounts"
+        },
+        "opportunities": {
+            "type": "hasMany",
+            "entity": "Opportunity",
+            "foreign": "account"
+        },
+        "cases": {
+            "type": "hasMany",
+            "entity": "Case",
+            "foreign": "account"
+        },
+        "documents": {
+            "type": "hasMany",
+            "entity": "Document",
+            "foreign": "accounts"
+        },
+        "meetingsPrimary": {
+            "type": "hasMany",
+            "entity": "Meeting",
+            "foreign": "account",
+            "layoutRelationshipsDisabled": true
+        },
+        "emailsPrimary": {
+            "type": "hasMany",
+            "entity": "Email",
+            "foreign": "account",
+            "layoutRelationshipsDisabled": true
+        },
+        "callsPrimary": {
+            "type": "hasMany",
+            "entity": "Call",
+            "foreign": "account",
+            "layoutRelationshipsDisabled": true
+        },
+        "tasksPrimary": {
+            "type": "hasMany",
+            "entity": "Task",
+            "foreign": "account",
+            "layoutRelationshipsDisabled": true
+        },
+        "meetings": {
+            "type": "hasChildren",
+            "entity": "Meeting",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true
+        },
+        "calls": {
+            "type": "hasChildren",
+            "entity": "Call",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true
+        },
+        "tasks": {
+            "type": "hasChildren",
+            "entity": "Task",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true
+        },
+        "emails": {
+            "type": "hasChildren",
+            "entity": "Email",
+            "foreign": "parent",
+            "layoutRelationshipsDisabled": true
+        },
+        "campaign": {
+            "type": "belongsTo",
+            "entity": "Campaign",
+            "foreign": "accounts",
+            "noJoin": true
+        },
+        "campaignLogRecords": {
+            "type": "hasChildren",
+            "entity": "CampaignLogRecord",
+            "foreign": "parent"
+        },
+        "targetLists": {
+            "type": "hasMany",
+            "entity": "TargetList",
+            "foreign": "accounts"
+        }
+    },
+    "collection": {
+        "sortBy": "name",
+        "asc": true
+    },
+    "indexes": {
+        "name": {
+            "columns": ["name", "deleted"]
+        },
+        "assignedUser": {
+            "columns": ["assignedUserId", "deleted"]
+        }
+    }
+}

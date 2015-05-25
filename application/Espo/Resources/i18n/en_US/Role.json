@@ -1,0 +1,44 @@
+{
+    "fields": {
+        "name": "Name",
+        "roles": "Roles",
+        "assignmentPermission": "Assignment Permission"
+    },
+    "links": {
+        "users": "Users",
+        "teams": "Teams"
+    },
+    "tooltips": {
+        "assignmentPermission": "Allows to restrict an ability for users to assign records to other users.\n\nall - no restriction\n\nteam - can assign users from own teams\n\nno - can assign only to self"
+    },
+    "labels": {
+        "Access": "Access",
+        "Create Role": "Create Role"
+    },
+    "options": {
+        "accessList": {
+            "not-set": "not-set",
+            "enabled": "enabled",
+            "disabled": "disabled"
+        },
+        "levelList": {
+            "all": "all",
+            "team": "team",
+            "own": "own",
+            "no": "no"
+        },
+        "assignmentPermission": {
+            "all": "all",
+            "team": "team",
+            "not-set": "not-set"
+        }
+    },
+    "actions": {
+        "read": "Read",
+        "edit": "Edit",
+        "delete": "Delete"
+    },
+    "messages": {
+        "changesAfterClearCache": "All changes in an access control will be applied after cache will be cleared."
+    }
+}

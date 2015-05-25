@@ -1,0 +1,14 @@
+{
+  "controller": "Controllers.Record",
+  "relationshipPanels":{
+     "log":{
+        "readOnly": true
+     }
+  },
+  "recordViews":{
+    "list":"ScheduledJob.Record.List"
+  },
+  "views": {
+    "list": "ScheduledJob.List"      
+  }
+}

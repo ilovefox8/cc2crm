@@ -1,0 +1,305 @@
+/************************************************************************
+ * This file is part of EspoCRM.
+ *
+ * EspoCRM - Open Source CRM application.
+ * Copyright (C) 2014-2015 Yuri Kuznetsov, Taras Machyshyn, Oleksiy Avramenko
+ * Website: http://www.espocrm.com
+ *
+ * EspoCRM is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * EspoCRM is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with EspoCRM. If not, see http://www.gnu.org/licenses/.
+ ************************************************************************/
+
+Espo.define('Views.Detail', 'Views.Main', function (Dep) {
+
+    return Dep.extend({
+
+        template: 'detail',
+
+        el: '#main',
+
+        scope: null,
+
+        name: 'Detail',
+
+        optionsToPass: [],
+
+        views: {
+            header: {
+                el: '#main > .page-header',
+                view: 'Header'
+            },
+            body: {
+                view: 'Record.Detail',
+                el: '#main > .body',
+            }
+        },
+
+        addUnfollowButtonToMenu: function () {
+            var index = -1;
+            this.menu.buttons.forEach(function (data, i) {
+                if (data.name == 'follow') {
+                    index = i;
+                    return;
+                }
+            }, this);
+            if (~index) {
+                this.menu.buttons.splice(index, 1);
+            }
+
+            this.menu.buttons.unshift({
+                name: 'unfollow',
+                label: 'Followed',
+                style: 'success',
+                action: 'unfollow'
+            });
+        },
+
+        addFollowButtonToMenu: function () {
+            var index = -1;
+            this.menu.buttons.forEach(function (data, i) {
+                if (data.name == 'unfollow') {
+                    index = i;
+                    return;
+                }
+            }, this);
+            if (~index) {
+                this.menu.buttons.splice(index, 1);
+            }
+
+            this.menu.buttons.unshift({
+                name: 'follow',
+                label: 'Follow',
+                style: 'default',
+                icon: 'glyphicon glyphicon-share-alt',
+                action: 'follow'
+            });
+        },
+
+        setup: function () {
+            Dep.prototype.setup.call(this);
+
+            if (this.getMetadata().get('scopes.' + this.scope + '.stream')) {
+                if (this.model.has('isFollowed')) {
+                    this.handleFollowButton();
+                }
+
+                this.listenTo(this.model, 'change:isFollowed', function () {
+                    this.handleFollowButton();
+                }, this);
+            }
+        },
+
+        handleFollowButton: function () {
+            if (this.model.get('isFollowed')) {
+                if (this.isRendered()) {
+                    this.addUnfollowButton();
+                }
+                this.addUnfollowButtonToMenu();
+            } else {
+                if (this.isRendered()) {
+                    this.addFollowButton();
+                }
+                this.addFollowButtonToMenu();
+            }
+        },
+
+        addFollowButton: function () {
+            $el = $('<button>').addClass('btn btn-default action')
+                               .attr('data-action', 'follow')
+                               .html('<span class="glyphicon glyphicon-share-alt"></span> ' + this.translate('Follow'));
+            $("div.header-buttons").prepend($el);
+        },
+
+        addUnfollowButton: function () {
+            $el = $('<button>').addClass('btn btn-default action btn-success')
+                               .attr('data-action', 'unfollow')
+                               .html(this.translate('Followed'));
+            $("div.header-buttons").prepend($el);
+        },
+
+        actionFollow: function () {
+            $el = this.$el.find('button[data-action="follow"]');
+            $el.addClass('disabled');
+            $.ajax({
+                url: this.model.name + '/' + this.model.id + '/subscription',
+                type: 'PUT',
+                success: function () {
+                    $el.remove();
+                    this.model.set('isFollowed', true);
+                }.bind(this),
+                error: function () {
+                    $el.removeClass('disabled');
+                }.bind(this)
+            });
+        },
+
+        actionUnfollow: function () {
+            $el = this.$el.find('button[data-action="unfollow"]');
+            $el.addClass('disabled');
+            $.ajax({
+                url: this.model.name + '/' + this.model.id + '/subscription',
+                type: 'DELETE',
+                success: function () {
+                    $el.remove();
+                    this.model.set('isFollowed', false);
+                }.bind(this),
+                error: function () {
+                    $el.removeClass('disabled');
+                }.bind(this)
+            });
+
+        },
+
+        getHeader: function () {
+            var name = Handlebars.Utils.escapeExpression(this.model.get('name'));
+
+            return this.buildHeaderHtml([
+                '<a href="#' + this.model.name + '">' + this.getLanguage().translate(this.model.name, 'scopeNamesPlural') + '</a>',
+                name
+            ]);
+        },
+
+        updatePageTitle: function () {
+            this.setPageTitle(this.model.get('name'));
+        },
+
+        updateRelationshipPanel: function (name) {
+            var bottom = this.getView('body').getView('bottom');
+            if (bottom) {
+                var rel = bottom.getView(name);
+                if (rel) {
+                    rel.collection.fetch();
+                }
+            }
+        },
+
+        relatedAttributeMap: {},
+
+        selectRelatedFilters: {},
+
+        actionCreateRelated: function (data) {
+            var self = this;
+            var link = data.link;
+            var scope = this.model.defs['links'][link].entity;
+            var foreignLink = this.model.defs['links'][link].foreign;
+
+            var attributes = {};
+
+            Object.keys(this.relatedAttributeMap[link] || {}).forEach(function (attr) {
+                attributes[this.relatedAttributeMap[link][attr]] = this.model.get(attr);
+            }, this);
+
+            this.notify('Loading...');
+
+            var viewName = this.getMetadata().get('clientDefs.' + scope + '.modalViews.edit') || 'Modals.Edit';
+            this.createView('quickCreate', 'Modals.Edit', {
+                scope: scope,
+                relate: {
+                    model: this.model,
+                    link: foreignLink,
+                },
+                attributes: attributes,
+            }, function (view) {
+                view.render();
+                view.notify(false);
+                view.once('after:save', function () {
+                    self.updateRelationshipPanel(link);
+                });
+            });
+        },
+
+        actionSelectRelated: function (data) {
+            var link = data.link;
+
+            if (!this.model.defs['links'][link]) {
+                throw new Error('Link ' + link + ' does not exist.');
+            }
+            var scope = this.model.defs['links'][link].entity;
+            var foreign = this.model.defs['links'][link].foreign;
+
+            var massRelateEnabled = false;
+            if (foreign) {
+                var foreignType = this.getMetadata().get('entityDefs.' + scope + '.links.' + foreign + '.type');
+                if (foreignType == 'hasMany') {
+                    massRelateEnabled = true;
+                }
+            }
+
+            var self = this;
+            var attributes = {};
+
+            var filters = Espo.Utils.cloneDeep(this.selectRelatedFilters[link]) || null;
+
+            for (var filterName in filters) {
+                if (typeof filters[filterName] == 'function') {
+                    filters[filterName] = filters[filterName].call(this);
+                }
+            }
+
+            this.notify('Loading...');
+            this.createView('dialog', 'Modals.SelectRecords', {
+                scope: scope,
+                multiple: true,
+                createButton: false,
+                filters: filters,
+                massRelateEnabled: massRelateEnabled
+            }, function (dialog) {
+                dialog.render();
+                this.notify(false);
+                dialog.once('select', function (selectObj) {
+                    var data = {};
+                    if (Object.prototype.toString.call(selectObj) === '[object Array]') {
+                        var ids = [];
+                        selectObj.forEach(function (model) {
+                            ids.push(model.id);
+                        });
+                        data.ids = ids;
+                    } else {
+                        if (selectObj.massRelate) {
+                            data.massRelate = true;
+                            data.where = selectObj.where;
+                        } else {
+                            data.id = selectObj.id;
+                        }
+                    }
+                    $.ajax({
+                        url: self.scope + '/' + self.model.id + '/' + link,
+                        type: 'POST',
+                        data: JSON.stringify(data),
+                        success: function () {
+                            self.notify('Linked', 'success');
+                            self.updateRelationshipPanel(link);
+                        },
+                        error: function () {
+                            self.notify('Error occurred', 'error');
+                        },
+                    });
+                }.bind(this));
+            }.bind(this));
+        },
+
+        actionDuplicate: function () {
+            var attributes = Espo.Utils.cloneDeep(this.model.attributes);
+            delete attributes.id;
+
+            var url = '#' + this.scope + '/create';
+
+            this.getRouter().dispatch(this.scope, 'create', {
+                attributes: attributes,
+            });
+            this.getRouter().navigate(url, {trigger: false});
+        },
+
+    });
+});
+

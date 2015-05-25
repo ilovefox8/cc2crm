@@ -1,0 +1,27 @@
+{
+   "params":[
+      {
+         "name":"required",
+         "type":"bool",
+         "default":false
+      },
+      {
+         "name":"options",
+         "type":"array",
+         "view": "Admin.FieldManager.Fields.Options"
+      },
+      {
+         "name":"default",
+         "type":"varchar"
+      },
+      {
+         "name":"translation",
+         "type":"varchar",
+         "hidden": true
+      }
+   ],
+   "filter": true,
+   "fieldDefs":{
+      "type":"varchar"
+   }
+}

@@ -1,0 +1,13 @@
+[
+	{
+		"label":"",
+		"rows":[
+			[{"name":"name"}],
+			[{"name":"status"}],
+			[{"name":"priority"}],
+			[{"name":"type"}],
+			[{"name":"account"}],
+			[{"name":"description"}]
+		]
+	}
+]

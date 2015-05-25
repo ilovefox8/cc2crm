@@ -1,0 +1,12 @@
+[
+	"account",
+	"assignedUser",
+	"createdAt",
+	"dateStart",
+	"modifiedAt",
+	"status",
+	"parent",
+	"users",
+	"contacts",
+	"leads"
+]

@@ -1,0 +1,18 @@
+{
+    "fields": {
+        "title": "Title",
+        "dateFrom": "Date From",
+        "dateTo": "Date To",
+        "autorefreshInterval": "Auto-refresh Interval",
+        "displayRecords": "Display Records",
+        "isDoubleHeight": "Height 2x",
+        "mode": "Mode"
+    },
+    "options": {
+    	"mode": {
+    		"agendaWeek": "Week (agenda)",
+    		"basicWeek": "Week",
+    		"month": "Month"
+    	}
+    }
+}

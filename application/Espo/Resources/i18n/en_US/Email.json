@@ -1,0 +1,66 @@
+{
+    "fields": {
+        "name": "Subject",
+        "parent": "Parent",
+        "status": "Status",
+        "dateSent": "Date Sent",
+        "from": "From",
+        "to": "To",
+        "cc": "CC",
+        "bcc": "BCC",
+        "isHtml": "Is Html",
+        "body": "Body",
+        "subject": "Subject",
+        "attachments": "Attachments",
+        "selectTemplate": "Select Template",
+        "fromEmailAddress": "From Address",
+        "toEmailAddresses": "To Address",
+        "emailAddress": "Email Address",
+        "deliveryDate": "Delivery Date",
+        "account": "Account",
+        "users": "Users"
+    },
+    "links": {
+    },
+    "options": {
+        "Draft": "Draft",
+        "Sending": "Sending",
+        "Sent": "Sent",
+        "Archived": "Archived",
+        "Received": "Received"
+    },
+    "labels": {
+        "Create Email": "Archive Email",
+        "Archive Email": "Archive Email",
+        "Compose": "Compose",
+        "Reply": "Reply",
+        "Reply to All": "Reply to All",
+        "Forward": "Forward",
+        "Original message": "Original message",
+        "Forwarded message": "Forwarded message",
+        "Email Accounts": "Email Accounts",
+        "Send Test Email": "Send Test Email",
+        "Send": "Send",
+        "Email Address": "Email Address",
+        "Mark Read": "Mark Read",
+        "Sending...": "Sending...",
+        "Save Draft": "Save Draft",
+        "Mark all as read": "Mark all as read",
+        "Show Plain Text": "Show Plain Text"
+    },
+    "messages": {
+        "noSmtpSetup": "No SMTP setup. {link}.",
+        "testEmailSent": "Test email has been sent",
+        "emailSent": "Email has been sent",
+        "savedAsDraft": "Saved as draft"
+    },
+    "presetFilters": {
+        "sent": "Sent",
+        "archived": "Archived",
+        "inbox": "Inbox",
+        "drafts": "Drafts"
+    },
+    "massActions": {
+        "markAsRead": "Mark As Read"
+    }
+}

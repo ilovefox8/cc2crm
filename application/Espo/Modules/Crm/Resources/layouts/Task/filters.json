@@ -1,0 +1,11 @@
+[
+	"account",
+	"assignedUser",
+	"createdAt",
+	"dateCompleted",
+	"dateStart",
+	"dateEnd",
+	"modifiedAt",
+	"status",
+	"priority"
+]
