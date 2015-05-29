@@ -1,30 +1,30 @@
 /************************************************************************
- * This file is part of EspoCRM.
+ * This file is part of FoxCRM.
  *
- * EspoCRM - Open Source CRM application.
+ * FoxCRM - Open Source CRM application.
  * Copyright (C) 2014-2015 Yuri Kuznetsov, Taras Machyshyn, Oleksiy Avramenko
  * Website: http://www.espocrm.com
  *
- * EspoCRM is free software: you can redistribute it and/or modify
+ * FoxCRM is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * EspoCRM is distributed in the hope that it will be useful,
+ * FoxCRM is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with EspoCRM. If not, see http://www.gnu.org/licenses/.
+ * along with FoxCRM. If not, see http://www.gnu.org/licenses/.
  ************************************************************************/ 
 
-Espo.FieldManager = function (defs, metadata) {
+Fox.FieldManager = function (defs, metadata) {
     this.defs = defs || {};
     this.metadata = metadata;
 };
 
-_.extend(Espo.FieldManager.prototype, {
+_.extend(Fox.FieldManager.prototype, {
 
     defs: null,
     
@@ -85,11 +85,11 @@ _.extend(Espo.FieldManager.prototype, {
                 }
                 if (naming == 'prefix') {
                     actualfFields.forEach(function (f) {
-                        fieldNames.push(f + Espo.Utils.upperCaseFirst(fieldName));
+                        fieldNames.push(f + Fox.Utils.upperCaseFirst(fieldName));
                     });
                 } else {
                     actualfFields.forEach(function (f) {
-                        fieldNames.push(fieldName + Espo.Utils.upperCaseFirst(f));
+                        fieldNames.push(fieldName + Fox.Utils.upperCaseFirst(f));
                     });
                 }
             } else {
@@ -111,11 +111,11 @@ _.extend(Espo.FieldManager.prototype, {
                 }
                 if (naming == 'prefix') {
                     notActualFields.forEach(function (f) {
-                        fieldNames.push(f + Espo.Utils.upperCaseFirst(fieldName));
+                        fieldNames.push(f + Fox.Utils.upperCaseFirst(fieldName));
                     });
                 } else {
                     notActualFields.forEach(function (f) {
-                        fieldNames.push(fieldName + Espo.Utils.upperCaseFirst(f));
+                        fieldNames.push(fieldName + Fox.Utils.upperCaseFirst(f));
                     });
                 }
             }
@@ -133,7 +133,7 @@ _.extend(Espo.FieldManager.prototype, {
                 return this.defs[fieldType].view;
             }
         }
-        return 'Fields.' + Espo.Utils.upperCaseFirst(fieldType);
+        return 'Fields.' + Fox.Utils.upperCaseFirst(fieldType);
     },
 });
 

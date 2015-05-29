@@ -1,29 +1,29 @@
 /************************************************************************
- * This file is part of EspoCRM.
+ * This file is part of FoxCRM.
  *
- * EspoCRM - Open Source CRM application.
+ * FoxCRM - Open Source CRM application.
  * Copyright (C) 2014-2015 Yuri Kuznetsov, Taras Machyshyn, Oleksiy Avramenko
  * Website: http://www.espocrm.com
  *
- * EspoCRM is free software: you can redistribute it and/or modify
+ * FoxCRM is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * EspoCRM is distributed in the hope that it will be useful,
+ * FoxCRM is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with EspoCRM. If not, see http://www.gnu.org/licenses/.
+ * along with FoxCRM. If not, see http://www.gnu.org/licenses/.
  ************************************************************************/ 
 
-(function (Espo, _, $) {
+(function (Fox, _, $) {
 
     var root = this;
 
-    Espo.Loader = function (cache) {
+    Fox.Loader = function (cache) {
         this.cache = cache || null;
         this._loadCallbacks = {};
         
@@ -32,13 +32,13 @@
         this.libsConfig = {};
     }
 
-    _.extend(Espo.Loader.prototype, {
+    _.extend(Fox.Loader.prototype, {
 
         cache: null,
 
         data: null,
 
-        godClass: Espo,
+        godClass: Fox,
 
         _loadCallbacks: null,
         
@@ -62,12 +62,12 @@
                 var name = arr[1];
                 var mod = arr[0];
                 if (mod == 'Custom') {
-                    path = 'client/custom/src/' + Espo.Utils.convert(name, 'C-h').split('.').join('/');
+                    path = 'client/custom/src/' + Fox.Utils.convert(name, 'C-h').split('.').join('/');
                 } else {
-                    path = 'client/modules/' + Espo.Utils.convert(mod, 'C-h') + '/src/' + Espo.Utils.convert(name, 'C-h').split('.').join('/');
+                    path = 'client/modules/' + Fox.Utils.convert(mod, 'C-h') + '/src/' + Fox.Utils.convert(name, 'C-h').split('.').join('/');
                 }
             } else {
-                path = 'client/src/' + Espo.Utils.convert(name, 'C-h').split('.').join('/');
+                path = 'client/src/' + Fox.Utils.convert(name, 'C-h').split('.').join('/');
             }
             path += '.js';
             return path;
@@ -327,15 +327,15 @@
         },
     });
 
-    Espo.loader = new Espo.Loader();
-    Espo.require = function (subject, callback) {
-        Espo.loader.require(subject, callback);
+    Fox.loader = new Fox.Loader();
+    Fox.require = function (subject, callback) {
+        Fox.loader.require(subject, callback);
     }
-    Espo.define = function (subject, dependency, callback) {
-        Espo.loader.define(subject, dependency, callback);
+    Fox.define = function (subject, dependency, callback) {
+        Fox.loader.define(subject, dependency, callback);
     }
-    Espo.loadLib = function (url, callback) {
-        Espo.loader.loadLib(url, callback);
+    Fox.loadLib = function (url, callback) {
+        Fox.loader.loadLib(url, callback);
     }
 
-}).call(this, Espo, _, $);
+}).call(this, Fox, _, $);

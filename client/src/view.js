@@ -1,26 +1,26 @@
 /************************************************************************
- * This file is part of EspoCRM.
+ * This file is part of FoxCRM.
  *
- * EspoCRM - Open Source CRM application.
+ * FoxCRM - Open Source CRM application.
  * Copyright (C) 2014-2015 Yuri Kuznetsov, Taras Machyshyn, Oleksiy Avramenko
  * Website: http://www.espocrm.com
  *
- * EspoCRM is free software: you can redistribute it and/or modify
+ * FoxCRM is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * EspoCRM is distributed in the hope that it will be useful,
+ * FoxCRM is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with EspoCRM. If not, see http://www.gnu.org/licenses/.
+ * along with FoxCRM. If not, see http://www.gnu.org/licenses/.
  ************************************************************************/
-(function (Espo, Backbone, _, Bull, $) {
+(function (Fox, Backbone, _, Bull, $) {
 
-    Espo.View = Bull.View.extend({
+    Fox.View = Bull.View.extend({
 
         addActionHandler: function (action, handler) {
             this.events = this.events || {};
@@ -31,7 +31,7 @@
 
         notify: function (label, type, timeout, scope) {
             if (label == false) {
-                Espo.Ui.notify(false);
+                Fox.Ui.notify(false);
                 return;
             }
             scope = scope || null;
@@ -40,7 +40,7 @@
                 timeout = null;
             }
             var text = this.getLanguage().translate(label, 'labels', scope);
-            Espo.Ui.notify(text, type, timeout);
+            Fox.Ui.notify(text, type, timeout);
         },
 
         reRender: function () {
@@ -148,7 +148,7 @@
         },
 
         updatePageTitle: function () {
-            var title = this.getConfig().get('applicationTitle') || 'EspoCRM';
+            var title = this.getConfig().get('applicationTitle') || 'FoxCRM';
             this.setPageTitle(title);
         },
 
@@ -161,4 +161,4 @@
         },
     });
 
-}).call(this, Espo, Backbone, _, Bull, $);
+}).call(this, Fox, Backbone, _, Bull, $);

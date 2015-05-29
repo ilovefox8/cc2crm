@@ -1,25 +1,25 @@
 /************************************************************************
- * This file is part of EspoCRM.
+ * This file is part of FoxCRM.
  *
- * EspoCRM - Open Source CRM application.
+ * FoxCRM - Open Source CRM application.
  * Copyright (C) 2014-2015 Yuri Kuznetsov, Taras Machyshyn, Oleksiy Avramenko
  * Website: http://www.espocrm.com
  *
- * EspoCRM is free software: you can redistribute it and/or modify
+ * FoxCRM is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * EspoCRM is distributed in the hope that it will be useful,
+ * FoxCRM is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with EspoCRM. If not, see http://www.gnu.org/licenses/.
+ * along with FoxCRM. If not, see http://www.gnu.org/licenses/.
  ************************************************************************/
 
-Espo.define('Views.Record.Merge', 'View', function (Dep) {
+Fox.define('Views.Record.Merge', 'View', function (Dep) {
 
     return Dep.extend({
 
@@ -166,7 +166,7 @@ Espo.define('Views.Record.Merge', 'View', function (Dep) {
             this.fields = differentFieldList;
 
             this.fields.forEach(function (field) {
-                var type = Espo.Utils.upperCaseFirst(this.models[0].getFieldParam(field, 'type'));
+                var type = Fox.Utils.upperCaseFirst(this.models[0].getFieldParam(field, 'type'));
 
                 this.models.forEach(function (model) {
                     this.createView(model.id + '-' + field, this.getFieldManager().getViewName(type), {

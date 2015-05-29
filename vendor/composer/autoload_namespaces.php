@@ -23,7 +23,7 @@ return array(
     'Psr\\Log\\' => array($vendorDir . '/psr/log'),
     'Monolog' => array($vendorDir . '/monolog/monolog/src'),
     'Identicon' => array($vendorDir . '/yzalis/identicon/src'),
-    'Espo\\Custom' => array($baseDir . '/custom'),
+    'Fox\\Custom' => array($baseDir . '/custom'),
     'Doctrine\\DBAL\\' => array($vendorDir . '/doctrine/dbal/lib'),
     'Doctrine\\Common\\Lexer\\' => array($vendorDir . '/doctrine/lexer/lib'),
     'Doctrine\\Common\\Inflector\\' => array($vendorDir . '/doctrine/inflector/lib'),

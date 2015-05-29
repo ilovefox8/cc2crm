@@ -1,25 +1,25 @@
 /************************************************************************
- * This file is part of EspoCRM.
+ * This file is part of FoxCRM.
  *
- * EspoCRM - Open Source CRM application.
+ * FoxCRM - Open Source CRM application.
  * Copyright (C) 2014-2015 Yuri Kuznetsov, Taras Machyshyn, Oleksiy Avramenko
  * Website: http://www.espocrm.com
  *
- * EspoCRM is free software: you can redistribute it and/or modify
+ * FoxCRM is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * EspoCRM is distributed in the hope that it will be useful,
+ * FoxCRM is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with EspoCRM. If not, see http://www.gnu.org/licenses/.
+ * along with FoxCRM. If not, see http://www.gnu.org/licenses/.
  ************************************************************************/
 
-Espo.define('Views.Fields.Base', 'View', function (Dep) {
+Fox.define('Views.Fields.Base', 'View', function (Dep) {
 
     return Dep.extend({
 
@@ -123,7 +123,7 @@ Espo.define('Views.Fields.Base', 'View', function (Dep) {
             this.mode = mode;
             var property = mode + 'Template';
             if (!(property in this)) {
-                this[property] = 'fields.' + Espo.Utils.camelCaseToHyphen(this.type) + '.' + this.mode;
+                this[property] = 'fields.' + Fox.Utils.camelCaseToHyphen(this.type) + '.' + this.mode;
             }
             this.template = this[property];
         },
@@ -446,7 +446,7 @@ Espo.define('Views.Fields.Base', 'View', function (Dep) {
 
         validate: function () {
             for (var i in this.validations) {
-                var method = 'validate' + Espo.Utils.upperCaseFirst(this.validations[i]);
+                var method = 'validate' + Fox.Utils.upperCaseFirst(this.validations[i]);
                 if (this[method].call(this)) {
                     this.trigger('invalid');
                     return true;

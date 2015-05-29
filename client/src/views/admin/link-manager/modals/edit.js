@@ -1,25 +1,25 @@
 /************************************************************************
- * This file is part of EspoCRM.
+ * This file is part of FoxCRM.
  *
- * EspoCRM - Open Source CRM application.
+ * FoxCRM - Open Source CRM application.
  * Copyright (C) 2014-2015 Yuri Kuznetsov, Taras Machyshyn, Oleksiy Avramenko
  * Website: http://www.espocrm.com
  *
- * EspoCRM is free software: you can redistribute it and/or modify
+ * FoxCRM is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * EspoCRM is distributed in the hope that it will be useful,
+ * FoxCRM is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with EspoCRM. If not, see http://www.gnu.org/licenses/.
+ * along with FoxCRM. If not, see http://www.gnu.org/licenses/.
  ************************************************************************/
 
-Espo.define('Views.Admin.LinkManager.Modals.Edit', ['Views.Modal', 'Views.Admin.LinkManager.Index'], function (Dep, Index) {
+Fox.define('Views.Admin.LinkManager.Modals.Edit', ['Views.Modal', 'Views.Admin.LinkManager.Index'], function (Dep, Index) {
 
     return Dep.extend({
 
@@ -61,7 +61,7 @@ Espo.define('Views.Admin.LinkManager.Modals.Edit', ['Views.Modal', 'Views.Admin.
 
             this.header = this.translate(header, 'labels', 'Admin');
 
-            var model = this.model = new Espo.Model();
+            var model = this.model = new Fox.Model();
             model.name = 'EntityManager';
 
             this.model.set('entity', scope);
@@ -211,24 +211,24 @@ Espo.define('Views.Admin.LinkManager.Modals.Edit', ['Views.Modal', 'Views.Admin.
 
             switch (linkType) {
                 case 'oneToMany':
-                    linkForeign = Espo.Utils.lowerCaseFirst(this.scope);
-                    link = this.toPlural(Espo.Utils.lowerCaseFirst(entityForeign))
+                    linkForeign = Fox.Utils.lowerCaseFirst(this.scope);
+                    link = this.toPlural(Fox.Utils.lowerCaseFirst(entityForeign))
                     break;
                 case 'manyToOne':
-                    linkForeign = this.toPlural(Espo.Utils.lowerCaseFirst(this.scope));
-                    link = Espo.Utils.lowerCaseFirst(entityForeign);
+                    linkForeign = this.toPlural(Fox.Utils.lowerCaseFirst(this.scope));
+                    link = Fox.Utils.lowerCaseFirst(entityForeign);
                     break;
                 case 'manyToMany':
-                    linkForeign = this.toPlural(Espo.Utils.lowerCaseFirst(this.scope));
-                    link = this.toPlural(Espo.Utils.lowerCaseFirst(entityForeign));
+                    linkForeign = this.toPlural(Fox.Utils.lowerCaseFirst(this.scope));
+                    link = this.toPlural(Fox.Utils.lowerCaseFirst(entityForeign));
                     break;
             }
 
             this.model.set('link', link);
             this.model.set('linkForeign', linkForeign);
 
-            this.model.set('label', Espo.Utils.upperCaseFirst(link));
-            this.model.set('labelForeign', Espo.Utils.upperCaseFirst(linkForeign));
+            this.model.set('label', Fox.Utils.upperCaseFirst(link));
+            this.model.set('labelForeign', Fox.Utils.upperCaseFirst(linkForeign));
 
             return;
         },
@@ -240,7 +240,7 @@ Espo.define('Views.Admin.LinkManager.Modals.Edit', ['Views.Modal', 'Views.Admin.
                     return g.toUpperCase();
                 }).replace(' ', '');
                 if (value.length) {
-                     value = Espo.Utils.lowerCaseFirst(value);
+                     value = Fox.Utils.lowerCaseFirst(value);
                 }
             }
             this.model.set(field, value);
@@ -318,16 +318,16 @@ Espo.define('Views.Admin.LinkManager.Modals.Edit', ['Views.Modal', 'Views.Admin.
                 }),
                 error: function (x) {
                     if (x.status == 409) {
-                        Espo.Ui.error(this.translate('linkAlreadyExists', 'messages', 'EntityManager'));
+                        Fox.Ui.error(this.translate('linkAlreadyExists', 'messages', 'EntityManager'));
                         x.errorIsHandled = true;
                     }
                     this.$el.find('button[data-name="save"]').removeClass('disabled');
                 }.bind(this)
             }).done(function () {
                 if (!this.isNew) {
-                    Espo.Ui.success(this.translate('Saved'));
+                    Fox.Ui.success(this.translate('Saved'));
                 } else {
-                    Espo.Ui.success(this.translate('Created'));
+                    Fox.Ui.success(this.translate('Created'));
                 }
 
                 var data;

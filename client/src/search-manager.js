@@ -1,26 +1,26 @@
 /************************************************************************
- * This file is part of EspoCRM.
+ * This file is part of FoxCRM.
  *
- * EspoCRM - Open Source CRM application.
+ * FoxCRM - Open Source CRM application.
  * Copyright (C) 2014-2015 Yuri Kuznetsov, Taras Machyshyn, Oleksiy Avramenko
  * Website: http://www.espocrm.com
  *
- * EspoCRM is free software: you can redistribute it and/or modify
+ * FoxCRM is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * EspoCRM is distributed in the hope that it will be useful,
+ * FoxCRM is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with EspoCRM. If not, see http://www.gnu.org/licenses/.
+ * along with FoxCRM. If not, see http://www.gnu.org/licenses/.
  ************************************************************************/
-(function (Espo, _) {
+(function (Fox, _) {
 
-    Espo.SearchManager = function (collection, type, storage, dateTime, defaultData, emptyOnReset) {
+    Fox.SearchManager = function (collection, type, storage, dateTime, defaultData, emptyOnReset) {
         this.collection = collection;
         this.scope = collection.name;
         this.storage = storage;
@@ -39,17 +39,17 @@
             this.defaultData = defaultData;
             for (var p in this.emptyData) {
                 if (!(p in defaultData)) {
-                    defaultData[p] = Espo.Utils.clone(this.emptyData[p]);
+                    defaultData[p] = Fox.Utils.clone(this.emptyData[p]);
                 }
             }
         }
 
-        this.data = Espo.Utils.clone(defaultData) || this.emptyData;
+        this.data = Fox.Utils.clone(defaultData) || this.emptyData;
 
         this.sanitizeData();
     };
 
-    _.extend(Espo.SearchManager.prototype, {
+    _.extend(Fox.SearchManager.prototype, {
 
         data: null,
 
@@ -156,7 +156,7 @@
         },
 
         loadStored: function () {
-            this.data = this.storage.get(this.type + 'Search', this.scope) || Espo.Utils.clone(this.defaultData) || Espo.Utils.clone(this.emptyData);
+            this.data = this.storage.get(this.type + 'Search', this.scope) || Fox.Utils.clone(this.defaultData) || Fox.Utils.clone(this.emptyData);
             this.sanitizeData();
             return this;
         },
@@ -166,17 +166,17 @@
         },
 
         setAdvanced: function (advanced) {
-            this.data = Espo.Utils.clone(this.data);
+            this.data = Fox.Utils.clone(this.data);
             this.data.advanced = advanced;
         },
 
         setBool: function (bool) {
-            this.data = Espo.Utils.clone(this.data);
+            this.data = Fox.Utils.clone(this.data);
             this.data.bool = bool;
         },
 
         setPrimary: function (primary) {
-            this.data = Espo.Utils.clone(this.data);
+            this.data = Fox.Utils.clone(this.data);
             this.data.primary = primary;
         },
 
@@ -188,7 +188,7 @@
         },
 
         empty: function () {
-            this.data = Espo.Utils.clone(this.emptyData);
+            this.data = Fox.Utils.clone(this.emptyData);
             if (this.storage) {
                 this.storage.clear(this.type + 'Search', this.scope);
             }
@@ -199,7 +199,7 @@
                 this.empty();
                 return;
             }
-            this.data = Espo.Utils.clone(this.defaultData) || Espo.Utils.clone(this.emptyData);
+            this.data = Fox.Utils.clone(this.defaultData) || Fox.Utils.clone(this.emptyData);
             if (this.storage) {
                 this.storage.clear(this.type + 'Search', this.scope);
             }
@@ -263,4 +263,4 @@
         },
     });
 
-}).call(this, Espo, _);
+}).call(this, Fox, _);

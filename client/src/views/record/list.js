@@ -1,25 +1,25 @@
 /************************************************************************
- * This file is part of EspoCRM.
+ * This file is part of FoxCRM.
  *
- * EspoCRM - Open Source CRM application.
+ * FoxCRM - Open Source CRM application.
  * Copyright (C) 2014-2015 Yuri Kuznetsov, Taras Machyshyn, Oleksiy Avramenko
  * Website: http://www.espocrm.com
  *
- * EspoCRM is free software: you can redistribute it and/or modify
+ * FoxCRM is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * EspoCRM is distributed in the hope that it will be useful,
+ * FoxCRM is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with EspoCRM. If not, see http://www.gnu.org/licenses/.
+ * along with FoxCRM. If not, see http://www.gnu.org/licenses/.
  ************************************************************************/
 
-Espo.define('Views.Record.List', 'View', function (Dep) {
+Fox.define('Views.Record.List', 'View', function (Dep) {
 
     return Dep.extend({
 
@@ -139,7 +139,7 @@ Espo.define('Views.Record.List', 'View', function (Dep) {
             'click .action': function (e) {
                 $el = $(e.currentTarget);
                 var action = $el.data('action');
-                var method = 'action' + Espo.Utils.upperCaseFirst(action);
+                var method = 'action' + Fox.Utils.upperCaseFirst(action);
                 if (typeof this[method] == 'function') {
                     var data = $el.data();
                     this[method](data);
@@ -153,7 +153,7 @@ Espo.define('Views.Record.List', 'View', function (Dep) {
                 $el = $(e.currentTarget);
                 var action = $el.data('action');
 
-                var method = 'massAction' + Espo.Utils.upperCaseFirst(action);
+                var method = 'massAction' + Fox.Utils.upperCaseFirst(action);
                 if (method in this) {
                 	this[method]();
                 }
@@ -347,12 +347,12 @@ Espo.define('Views.Record.List', 'View', function (Dep) {
 		                        if (count == 1) {
 		                            msg = 'massRemoveResultSingle'
 		                        }
-                				Espo.Ui.success(this.translate(msg, 'messages').replace('{count}', count));
+                				Fox.Ui.success(this.translate(msg, 'messages').replace('{count}', count));
                 			}, this);
                 			this.collection.fetch();
-                			Espo.Ui.notify(false);
+                			Fox.Ui.notify(false);
                 		} else {
-                			Espo.Ui.warning(self.translate('noRecordsRemoved', 'messages'));
+                			Fox.Ui.warning(self.translate('noRecordsRemoved', 'messages'));
                 		}
                 	} else {
                 		var idsRemoved = result.ids || [];
@@ -361,7 +361,7 @@ Espo.define('Views.Record.List', 'View', function (Dep) {
 	                    }
 	                    if (count) {
 	                        idsRemoved.forEach(function (id) {
-	                            Espo.Ui.notify(false);
+	                            Fox.Ui.notify(false);
 	                            this.checkedList = [];
 	                            var model = this.collection.get(id);
 	                            this.collection.remove(model);
@@ -375,9 +375,9 @@ Espo.define('Views.Record.List', 'View', function (Dep) {
 	                        if (count == 1) {
 	                            msg = 'massRemoveResultSingle'
 	                        }
-	                        Espo.Ui.success(self.translate(msg, 'messages').replace('{count}', count));
+	                        Fox.Ui.success(self.translate(msg, 'messages').replace('{count}', count));
 	                    } else {
-	                        Espo.Ui.warning(self.translate('noRecordsRemoved', 'messages'));
+	                        Fox.Ui.warning(self.translate('noRecordsRemoved', 'messages'));
 	                    }
 	                }
                 }.bind(this));
@@ -428,9 +428,9 @@ Espo.define('Views.Record.List', 'View', function (Dep) {
                             if (count == 1) {
                                 msg = 'massUpdateResultSingle'
                             }
-                            Espo.Ui.success(this.translate(msg, 'messages').replace('{count}', count));
+                            Fox.Ui.success(this.translate(msg, 'messages').replace('{count}', count));
                         } else {
-                            Espo.Ui.warning(this.translate('noRecordsUpdated', 'messages'));
+                            Fox.Ui.warning(this.translate('noRecordsUpdated', 'messages'));
                         }
                         if (allResultIsChecked) {
                         	this.selectAllResult();
@@ -464,9 +464,9 @@ Espo.define('Views.Record.List', 'View', function (Dep) {
             }
 
             this.scope = this.collection.name || null;
-            this.events = Espo.Utils.clone(this.events);
-            this.massActionList = Espo.Utils.clone(this.massActionList);
-            this.buttonList = Espo.Utils.clone(this.buttonList);
+            this.events = Fox.Utils.clone(this.events);
+            this.massActionList = Fox.Utils.clone(this.massActionList);
+            this.buttonList = Fox.Utils.clone(this.buttonList);
 
             var checkAllResultMassActionList = [];
             this.checkAllResultMassActionList.forEach(function (item) {
@@ -863,7 +863,7 @@ Espo.define('Views.Record.List', 'View', function (Dep) {
                     id: id
                 }, function (view) {
                     view.once('after:render', function () {
-                        Espo.Ui.notify(false);
+                        Fox.Ui.notify(false);
                     });
                     view.render();
                     view.once('after:save', function () {
@@ -893,7 +893,7 @@ Espo.define('Views.Record.List', 'View', function (Dep) {
                     fullFormButton: !d.noFullForm
                 }, function (view) {
                     view.once('after:render', function () {
-                        Espo.Ui.notify(false);
+                        Fox.Ui.notify(false);
                     });
 
                     view.render();

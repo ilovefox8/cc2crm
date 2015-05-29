@@ -1,0 +1,5 @@
+[2015-05-27 09:25:23] Fox.ERROR: E_RECOVERABLE_ERROR: Object of class Fox\Entities\AuthToken could not be converted to string {"file":"/home/wwwroot/cc2crm/application/Fox/ORM/Repositories/RDB.php","line":181} []
+[2015-05-27 09:25:23] Fox.ERROR: E_RECOVERABLE_ERROR: Object of class Fox\Entities\User could not be converted to string {"file":"/home/wwwroot/cc2crm/application/Fox/ORM/Repositories/RDB.php","line":181} []
+[2015-05-27 09:25:23] Fox.ERROR: E_RECOVERABLE_ERROR: Object of class Fox\Modules\Crm\Entities\Account could not be converted to string {"file":"/home/wwwroot/cc2crm/application/Fox/ORM/Repositories/RDB.php","line":181} []
+[2015-05-27 09:25:30] Fox.ERROR: E_RECOVERABLE_ERROR: Object of class Fox\Entities\AuthToken could not be converted to string {"file":"/home/wwwroot/cc2crm/application/Fox/ORM/Repositories/RDB.php","line":181} []
+[2015-05-27 09:25:30] Fox.ERROR: E_RECOVERABLE_ERROR: Object of class Fox\Entities\User could not be converted to string {"file":"/home/wwwroot/cc2crm/application/Fox/ORM/Repositories/RDB.php","line":181} []

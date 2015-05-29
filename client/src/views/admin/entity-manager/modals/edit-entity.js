@@ -1,25 +1,25 @@
 /************************************************************************
- * This file is part of EspoCRM.
+ * This file is part of FoxCRM.
  *
- * EspoCRM - Open Source CRM application.
+ * FoxCRM - Open Source CRM application.
  * Copyright (C) 2014-2015 Yuri Kuznetsov, Taras Machyshyn, Oleksiy Avramenko
  * Website: http://www.espocrm.com
  *
- * EspoCRM is free software: you can redistribute it and/or modify
+ * FoxCRM is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * EspoCRM is distributed in the hope that it will be useful,
+ * FoxCRM is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with EspoCRM. If not, see http://www.gnu.org/licenses/.
+ * along with FoxCRM. If not, see http://www.gnu.org/licenses/.
  ************************************************************************/
 
-Espo.define('Views.Admin.EntityManager.Modals.EditEntity', 'Views.Modal', function (Dep) {
+Fox.define('Views.Admin.EntityManager.Modals.EditEntity', 'Views.Modal', function (Dep) {
 
     return Dep.extend({
 
@@ -56,7 +56,7 @@ Espo.define('Views.Admin.EntityManager.Modals.EditEntity', 'Views.Modal', functi
 
             this.header = this.translate(header, 'labels', 'Admin');
 
-            var model = this.model = new Espo.Model();
+            var model = this.model = new Fox.Model();
             model.name = 'EntityManager';
 
             this.hasStreamField = true;
@@ -259,9 +259,9 @@ Espo.define('Views.Admin.EntityManager.Modals.EditEntity', 'Views.Modal', functi
                 }.bind(this)
             }).done(function () {
                 if (this.scope) {
-                    Espo.Ui.success(this.translate('Saved'));
+                    Fox.Ui.success(this.translate('Saved'));
                 } else {
-                    Espo.Ui.success(this.translate('entityCreated', 'messages', 'EntityManager'));
+                    Fox.Ui.success(this.translate('entityCreated', 'messages', 'EntityManager'));
                 }
                 var global = ((this.getLanguage().data || {}) || {}).Global;
                 (global.scopeNames || {})[name] = this.model.get('labelSingular');

@@ -14,7 +14,7 @@ return array (
   'useCache' => true,
   'recordsPerPage' => 20,
   'recordsPerPageSmall' => 5,
-  'applicationName' => 'EspoCRM',
+  'applicationName' => 'FoxCRM',
   'version' => '3.3.0',
   'timeZone' => 'UTC',
   'dateFormat' => 'MM/DD/YYYY',
@@ -64,7 +64,7 @@ return array (
     'isRotate' => true,
     'maxRotateFiles' => 30,
   ),
-  'authenticationMethod' => 'Espo',
+  'authenticationMethod' => 'Fox',
   'globalSearchEntityList' => 
   array (
     0 => 'Account',

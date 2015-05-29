@@ -5,24 +5,24 @@ return array (
   array (
     'afterSave' => 
     array (
-      0 => '\\Espo\\Hooks\\Common\\AssignmentEmailNotification',
-      1 => '\\Espo\\Hooks\\Common\\Stream',
-      2 => '\\Espo\\Hooks\\Common\\Notifications',
+      0 => '\\Fox\\Hooks\\Common\\AssignmentEmailNotification',
+      1 => '\\Fox\\Hooks\\Common\\Stream',
+      2 => '\\Fox\\Hooks\\Common\\Notifications',
     ),
     'afterRemove' => 
     array (
-      0 => '\\Espo\\Hooks\\Common\\Stream',
+      0 => '\\Fox\\Hooks\\Common\\Stream',
     ),
   ),
   'Note' => 
   array (
     'beforeSave' => 
     array (
-      0 => '\\Espo\\Hooks\\Note\\Mentions',
+      0 => '\\Fox\\Hooks\\Note\\Mentions',
     ),
     'afterSave' => 
     array (
-      0 => '\\Espo\\Hooks\\Note\\Notifications',
+      0 => '\\Fox\\Hooks\\Note\\Notifications',
     ),
   ),
 );

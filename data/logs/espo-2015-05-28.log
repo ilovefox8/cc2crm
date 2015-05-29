@@ -1,0 +1,298 @@
+[2015-05-28 07:25:49] Fox.ERROR: Uncaught exception {"exception":"[object] (Fox\\Core\\Exceptions\\Error: Class '\\Fox\\Hooks\\Common\\AssignmentEmailNotification' does not exist at /home/wwwroot/cc2crm/application/Fox/Core/HookManager.php:125)"} []
+[2015-05-28 07:26:12] Fox.ERROR: Uncaught exception {"exception":"[object] (Fox\\Core\\Exceptions\\Error: Class '\\Fox\\Hooks\\Common\\AssignmentEmailNotification' does not exist at /home/wwwroot/cc2crm/application/Fox/Core/HookManager.php:125)"} []
+[2015-05-28 07:26:22] Fox.ERROR: Uncaught exception {"exception":"[object] (Fox\\Core\\Exceptions\\Error: Class '\\Fox\\Hooks\\Common\\AssignmentEmailNotification' does not exist at /home/wwwroot/cc2crm/application/Fox/Core/HookManager.php:125)"} []
+[2015-05-28 07:27:21] Fox.ERROR: Uncaught exception {"exception":"[object] (Fox\\Core\\Exceptions\\Error: Class '\\Fox\\Hooks\\Common\\AssignmentEmailNotification' does not exist at /home/wwwroot/cc2crm/application/Fox/Core/HookManager.php:125)"} []
+[2015-05-28 07:27:33] Fox.ERROR: Uncaught exception {"exception":"[object] (Fox\\Core\\Exceptions\\Error: Class '\\Fox\\Hooks\\Common\\AssignmentEmailNotification' does not exist at /home/wwwroot/cc2crm/application/Fox/Core/HookManager.php:125)"} []
+[2015-05-28 07:29:35] Fox.ERROR: Uncaught exception {"exception":"[object] (Fox\\Core\\Exceptions\\Error: Class '\\Fox\\Hooks\\Common\\AssignmentEmailNotification' does not exist at /home/wwwroot/cc2crm/application/Fox/Core/HookManager.php:125)"} []
+[2015-05-28 07:29:47] Fox.ERROR: Uncaught exception {"exception":"[object] (Fox\\Core\\Exceptions\\Error: Class '\\Fox\\Hooks\\Common\\AssignmentEmailNotification' does not exist at /home/wwwroot/cc2crm/application/Fox/Core/HookManager.php:125)"} []
+[2015-05-28 07:33:07] Fox.ERROR: Uncaught exception {"exception":"[object] (Fox\\Core\\Exceptions\\Error: Class '\\Fox\\Hooks\\Common\\AssignmentEmailNotification' does not exist at /home/wwwroot/cc2crm/application/Fox/Core/HookManager.php:125)"} []
+[2015-05-28 07:33:19] Fox.ERROR: Uncaught exception {"exception":"[object] (Fox\\Core\\Exceptions\\Error: Class '\\Fox\\Hooks\\Common\\AssignmentEmailNotification' does not exist at /home/wwwroot/cc2crm/application/Fox/Core/HookManager.php:125)"} []
+[2015-05-28 07:33:26] Fox.ERROR: Uncaught exception {"exception":"[object] (Fox\\Core\\Exceptions\\Error: Class '\\Fox\\Hooks\\Common\\AssignmentEmailNotification' does not exist at /home/wwwroot/cc2crm/application/Fox/Core/HookManager.php:125)"} []
+[2015-05-28 07:35:22] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":370} []
+[2015-05-28 07:35:22] Fox.WARNING: E_WARNING: chown(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":392} []
+[2015-05-28 07:35:22] Fox.WARNING: E_WARNING: chgrp(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":403} []
+[2015-05-28 07:35:22] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":380} []
+[2015-05-28 07:35:22] Fox.ERROR: API [GET]:/Admin/clearCache, Params:Array
+(
+)
+, InputData:  - Permission denied for data/config.php [] []
+[2015-05-28 07:35:22] Fox.ERROR: Display Error: Permission denied for data/config.php, Code: 500 URL: /api/v1/Admin/clearCache [] []
+[2015-05-28 07:35:35] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":370} []
+[2015-05-28 07:35:35] Fox.WARNING: E_WARNING: chown(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":392} []
+[2015-05-28 07:35:35] Fox.WARNING: E_WARNING: chgrp(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":403} []
+[2015-05-28 07:35:35] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":380} []
+[2015-05-28 07:35:35] Fox.ERROR: API [GET]:/Admin/clearCache, Params:Array
+(
+)
+, InputData:  - Permission denied for data/config.php [] []
+[2015-05-28 07:35:35] Fox.ERROR: Display Error: Permission denied for data/config.php, Code: 500 URL: /api/v1/Admin/clearCache [] []
+[2015-05-28 07:37:13] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":370} []
+[2015-05-28 07:37:13] Fox.WARNING: E_WARNING: chown(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":392} []
+[2015-05-28 07:37:13] Fox.WARNING: E_WARNING: chgrp(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":403} []
+[2015-05-28 07:37:13] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":380} []
+[2015-05-28 07:37:13] Fox.ERROR: API [GET]:/Admin/clearCache, Params:Array
+(
+)
+, InputData:  - Permission denied for data/config.php [] []
+[2015-05-28 07:37:13] Fox.ERROR: Display Error: Permission denied for data/config.php, Code: 500 URL: /api/v1/Admin/clearCache [] []
+[2015-05-28 07:37:28] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":370} []
+[2015-05-28 07:37:28] Fox.WARNING: E_WARNING: chown(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":392} []
+[2015-05-28 07:37:28] Fox.WARNING: E_WARNING: chgrp(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":403} []
+[2015-05-28 07:37:28] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":380} []
+[2015-05-28 07:37:28] Fox.ERROR: API [GET]:/Admin/clearCache, Params:Array
+(
+)
+, InputData:  - Permission denied for data/config.php [] []
+[2015-05-28 07:37:28] Fox.ERROR: Display Error: Permission denied for data/config.php, Code: 500 URL: /api/v1/Admin/clearCache [] []
+[2015-05-28 07:45:07] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":370} []
+[2015-05-28 07:45:07] Fox.WARNING: E_WARNING: chown(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":392} []
+[2015-05-28 07:45:07] Fox.WARNING: E_WARNING: chgrp(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":403} []
+[2015-05-28 07:45:07] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":380} []
+[2015-05-28 07:45:07] Fox.ERROR: API [PATCH]:/Settings, Params:Array
+(
+)
+, InputData: {"companyLogoId":null,"companyLogoName":null} - Permission denied for data/config.php [] []
+[2015-05-28 07:45:07] Fox.ERROR: Display Error: Permission denied for data/config.php, Code: 500 URL: /api/v1/Settings [] []
+[2015-05-28 07:45:36] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":370} []
+[2015-05-28 07:45:36] Fox.WARNING: E_WARNING: chown(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":392} []
+[2015-05-28 07:45:36] Fox.WARNING: E_WARNING: chgrp(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":403} []
+[2015-05-28 07:45:36] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":380} []
+[2015-05-28 07:45:36] Fox.ERROR: API [PATCH]:/Settings, Params:Array
+(
+)
+, InputData: {"companyLogoId":null,"companyLogoName":null} - Permission denied for data/config.php [] []
+[2015-05-28 07:45:36] Fox.ERROR: Display Error: Permission denied for data/config.php, Code: 500 URL: /api/v1/Settings [] []
+[2015-05-28 07:45:43] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":370} []
+[2015-05-28 07:45:43] Fox.WARNING: E_WARNING: chown(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":392} []
+[2015-05-28 07:45:43] Fox.WARNING: E_WARNING: chgrp(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":403} []
+[2015-05-28 07:45:43] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":380} []
+[2015-05-28 07:45:43] Fox.ERROR: API [PATCH]:/Settings, Params:Array
+(
+)
+, InputData: {"companyLogoId":null,"companyLogoName":null} - Permission denied for data/config.php [] []
+[2015-05-28 07:45:43] Fox.ERROR: Display Error: Permission denied for data/config.php, Code: 500 URL: /api/v1/Settings [] []
+[2015-05-28 07:46:15] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":370} []
+[2015-05-28 07:46:15] Fox.WARNING: E_WARNING: chown(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":392} []
+[2015-05-28 07:46:15] Fox.WARNING: E_WARNING: chgrp(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":403} []
+[2015-05-28 07:46:15] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":380} []
+[2015-05-28 07:46:15] Fox.ERROR: API [GET]:/Admin/clearCache, Params:Array
+(
+)
+, InputData:  - Permission denied for data/config.php [] []
+[2015-05-28 07:46:15] Fox.ERROR: Display Error: Permission denied for data/config.php, Code: 500 URL: /api/v1/Admin/clearCache [] []
+[2015-05-28 07:46:18] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":370} []
+[2015-05-28 07:46:18] Fox.WARNING: E_WARNING: chown(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":392} []
+[2015-05-28 07:46:18] Fox.WARNING: E_WARNING: chgrp(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":403} []
+[2015-05-28 07:46:18] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":380} []
+[2015-05-28 07:46:18] Fox.ERROR: API [GET]:/Admin/clearCache, Params:Array
+(
+)
+, InputData:  - Permission denied for data/config.php [] []
+[2015-05-28 07:46:18] Fox.ERROR: Display Error: Permission denied for data/config.php, Code: 500 URL: /api/v1/Admin/clearCache [] []
+[2015-05-28 07:46:23] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":370} []
+[2015-05-28 07:46:23] Fox.WARNING: E_WARNING: chown(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":392} []
+[2015-05-28 07:46:23] Fox.WARNING: E_WARNING: chgrp(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":403} []
+[2015-05-28 07:46:23] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":380} []
+[2015-05-28 07:46:23] Fox.ERROR: API [GET]:/Admin/clearCache, Params:Array
+(
+)
+, InputData:  - Permission denied for data/config.php [] []
+[2015-05-28 07:46:23] Fox.ERROR: Display Error: Permission denied for data/config.php, Code: 500 URL: /api/v1/Admin/clearCache [] []
+[2015-05-28 07:47:10] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":370} []
+[2015-05-28 07:47:10] Fox.WARNING: E_WARNING: chown(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":392} []
+[2015-05-28 07:47:10] Fox.WARNING: E_WARNING: chgrp(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":403} []
+[2015-05-28 07:47:10] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":380} []
+[2015-05-28 07:47:10] Fox.ERROR: API [GET]:/Admin/clearCache, Params:Array
+(
+)
+, InputData:  - Permission denied for data/config.php [] []
+[2015-05-28 07:47:10] Fox.ERROR: Display Error: Permission denied for data/config.php, Code: 500 URL: /api/v1/Admin/clearCache [] []
+[2015-05-28 07:47:21] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":370} []
+[2015-05-28 07:47:21] Fox.WARNING: E_WARNING: chown(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":392} []
+[2015-05-28 07:47:21] Fox.WARNING: E_WARNING: chgrp(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":403} []
+[2015-05-28 07:47:21] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":380} []
+[2015-05-28 07:48:01] Fox.ERROR: API [GET]:/Admin/clearCache, Params:Array
+(
+)
+, InputData:  - Permission denied for data/config.php [] []
+[2015-05-28 07:48:01] Fox.ERROR: Display Error: Permission denied for data/config.php, Code: 500 URL: /api/v1/Admin/clearCache [] []
+[2015-05-28 07:48:19] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":370} []
+[2015-05-28 07:48:19] Fox.WARNING: E_WARNING: chown(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":392} []
+[2015-05-28 07:48:19] Fox.WARNING: E_WARNING: chgrp(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":403} []
+[2015-05-28 07:48:19] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":380} []
+[2015-05-28 07:48:19] Fox.ERROR: API [GET]:/Admin/clearCache, Params:Array
+(
+)
+, InputData:  - Permission denied for data/config.php [] []
+[2015-05-28 07:48:19] Fox.ERROR: Display Error: Permission denied for data/config.php, Code: 500 URL: /api/v1/Admin/clearCache [] []
+[2015-05-28 07:49:09] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":370} []
+[2015-05-28 07:49:09] Fox.WARNING: E_WARNING: chown(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":392} []
+[2015-05-28 07:49:09] Fox.WARNING: E_WARNING: chgrp(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":403} []
+[2015-05-28 07:49:09] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":380} []
+[2015-05-28 07:49:09] Fox.ERROR: API [GET]:/Admin/clearCache, Params:Array
+(
+)
+, InputData:  - Permission denied for data/config.php [] []
+[2015-05-28 07:49:09] Fox.ERROR: Display Error: Permission denied for data/config.php, Code: 500 URL: /api/v1/Admin/clearCache [] []
+[2015-05-28 07:49:20] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":370} []
+[2015-05-28 07:49:20] Fox.WARNING: E_WARNING: chown(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":392} []
+[2015-05-28 07:49:20] Fox.WARNING: E_WARNING: chgrp(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":403} []
+[2015-05-28 07:49:20] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":380} []
+[2015-05-28 07:49:20] Fox.ERROR: API [GET]:/Admin/clearCache, Params:Array
+(
+)
+, InputData:  - Permission denied for data/config.php [] []
+[2015-05-28 07:49:20] Fox.ERROR: Display Error: Permission denied for data/config.php, Code: 500 URL: /api/v1/Admin/clearCache [] []
+[2015-05-28 07:49:30] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":370} []
+[2015-05-28 07:49:30] Fox.WARNING: E_WARNING: chown(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":392} []
+[2015-05-28 07:49:30] Fox.WARNING: E_WARNING: chgrp(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":403} []
+[2015-05-28 07:49:30] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":380} []
+[2015-05-28 07:49:30] Fox.ERROR: API [GET]:/Admin/clearCache, Params:Array
+(
+)
+, InputData:  - Permission denied for data/config.php [] []
+[2015-05-28 07:49:30] Fox.ERROR: Display Error: Permission denied for data/config.php, Code: 500 URL: /api/v1/Admin/clearCache [] []
+[2015-05-28 07:49:45] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":370} []
+[2015-05-28 07:49:45] Fox.WARNING: E_WARNING: chown(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":392} []
+[2015-05-28 07:49:45] Fox.WARNING: E_WARNING: chgrp(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":403} []
+[2015-05-28 07:49:45] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":380} []
+[2015-05-28 07:49:45] Fox.ERROR: API [GET]:/Admin/clearCache, Params:Array
+(
+)
+, InputData:  - Permission denied for data/config.php [] []
+[2015-05-28 07:49:45] Fox.ERROR: Display Error: Permission denied for data/config.php, Code: 500 URL: /api/v1/Admin/clearCache [] []
+[2015-05-28 08:00:57] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":370} []
+[2015-05-28 08:00:57] Fox.WARNING: E_WARNING: chown(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":392} []
+[2015-05-28 08:00:57] Fox.WARNING: E_WARNING: chgrp(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":403} []
+[2015-05-28 08:00:57] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":380} []
+[2015-05-28 08:00:57] Fox.ERROR: API [GET]:/Admin/clearCache, Params:Array
+(
+)
+, InputData:  - Permission denied for data/config.php [] []
+[2015-05-28 08:00:57] Fox.ERROR: Display Error: Permission denied for data/config.php, Code: 500 URL: /api/v1/Admin/clearCache [] []
+[2015-05-28 08:01:22] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":370} []
+[2015-05-28 08:01:22] Fox.WARNING: E_WARNING: chown(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":392} []
+[2015-05-28 08:01:22] Fox.WARNING: E_WARNING: chgrp(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":403} []
+[2015-05-28 08:01:22] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":380} []
+[2015-05-28 08:02:26] Fox.ERROR: API [GET]:/Admin/clearCache, Params:Array
+(
+)
+, InputData:  - Permission denied for data/config.php [] []
+[2015-05-28 08:02:26] Fox.ERROR: Display Error: Permission denied for data/config.php, Code: 500 URL: /api/v1/Admin/clearCache [] []
+[2015-05-28 08:02:58] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":370} []
+[2015-05-28 08:02:58] Fox.WARNING: E_WARNING: chown(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":392} []
+[2015-05-28 08:02:58] Fox.WARNING: E_WARNING: chgrp(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":403} []
+[2015-05-28 08:02:58] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":380} []
+[2015-05-28 08:02:58] Fox.ERROR: API [GET]:/Admin/clearCache, Params:Array
+(
+)
+, InputData:  - Permission denied for data/config.php [] []
+[2015-05-28 08:02:58] Fox.ERROR: Display Error: Permission denied for data/config.php, Code: 500 URL: /api/v1/Admin/clearCache [] []
+[2015-05-28 08:03:00] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":370} []
+[2015-05-28 08:03:00] Fox.WARNING: E_WARNING: chown(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":392} []
+[2015-05-28 08:03:00] Fox.WARNING: E_WARNING: chgrp(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":403} []
+[2015-05-28 08:03:00] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":380} []
+[2015-05-28 08:03:00] Fox.ERROR: API [GET]:/Admin/clearCache, Params:Array
+(
+)
+, InputData:  - Permission denied for data/config.php [] []
+[2015-05-28 08:03:00] Fox.ERROR: Display Error: Permission denied for data/config.php, Code: 500 URL: /api/v1/Admin/clearCache [] []
+[2015-05-28 08:03:06] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":370} []
+[2015-05-28 08:03:06] Fox.WARNING: E_WARNING: chown(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":392} []
+[2015-05-28 08:03:06] Fox.WARNING: E_WARNING: chgrp(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":403} []
+[2015-05-28 08:03:06] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":380} []
+[2015-05-28 08:03:06] Fox.ERROR: API [GET]:/Admin/clearCache, Params:Array
+(
+)
+, InputData:  - Permission denied for data/config.php [] []
+[2015-05-28 08:03:06] Fox.ERROR: Display Error: Permission denied for data/config.php, Code: 500 URL: /api/v1/Admin/clearCache [] []
+[2015-05-28 08:03:15] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":370} []
+[2015-05-28 08:03:15] Fox.WARNING: E_WARNING: chown(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":392} []
+[2015-05-28 08:03:15] Fox.WARNING: E_WARNING: chgrp(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":403} []
+[2015-05-28 08:03:15] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":380} []
+[2015-05-28 08:03:15] Fox.ERROR: API [GET]:/Admin/clearCache, Params:Array
+(
+)
+, InputData:  - Permission denied for data/config.php [] []
+[2015-05-28 08:03:15] Fox.ERROR: Display Error: Permission denied for data/config.php, Code: 500 URL: /api/v1/Admin/clearCache [] []
+[2015-05-28 08:04:14] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":370} []
+[2015-05-28 08:04:14] Fox.WARNING: E_WARNING: chown(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":392} []
+[2015-05-28 08:04:14] Fox.WARNING: E_WARNING: chgrp(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":403} []
+[2015-05-28 08:04:14] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":380} []
+[2015-05-28 08:04:14] Fox.ERROR: API [GET]:/Admin/clearCache, Params:Array
+(
+)
+, InputData:  - Permission denied for data/config.php [] []
+[2015-05-28 08:04:14] Fox.ERROR: Display Error: Permission denied for data/config.php, Code: 500 URL: /api/v1/Admin/clearCache [] []
+[2015-05-28 08:05:31] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":370} []
+[2015-05-28 08:05:31] Fox.WARNING: E_WARNING: chown(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":392} []
+[2015-05-28 08:05:31] Fox.WARNING: E_WARNING: chgrp(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":403} []
+[2015-05-28 08:05:31] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":380} []
+[2015-05-28 08:05:31] Fox.ERROR: API [GET]:/Admin/clearCache, Params:Array
+(
+)
+, InputData:  - Permission denied for data/config.php [] []
+[2015-05-28 08:05:31] Fox.ERROR: Display Error: Permission denied for data/config.php, Code: 500 URL: /api/v1/Admin/clearCache [] []
+[2015-05-28 08:06:05] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":370} []
+[2015-05-28 08:06:05] Fox.WARNING: E_WARNING: chown(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":392} []
+[2015-05-28 08:06:05] Fox.WARNING: E_WARNING: chgrp(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":403} []
+[2015-05-28 08:06:05] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":380} []
+[2015-05-28 08:06:05] Fox.ERROR: API [GET]:/Admin/rebuild, Params:Array
+(
+)
+, InputData:  - Permission denied for data/config.php [] []
+[2015-05-28 08:06:05] Fox.ERROR: Display Error: Permission denied for data/config.php, Code: 500 URL: /api/v1/Admin/rebuild [] []
+[2015-05-28 08:07:18] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":370} []
+[2015-05-28 08:07:18] Fox.WARNING: E_WARNING: chown(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":392} []
+[2015-05-28 08:07:18] Fox.WARNING: E_WARNING: chgrp(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":403} []
+[2015-05-28 08:07:18] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":380} []
+[2015-05-28 08:07:18] Fox.ERROR: API [GET]:/Admin/clearCache, Params:Array
+(
+)
+, InputData:  - Permission denied for data/config.php [] []
+[2015-05-28 08:07:18] Fox.ERROR: Display Error: Permission denied for data/config.php, Code: 500 URL: /api/v1/Admin/clearCache [] []
+[2015-05-28 08:07:53] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":370} []
+[2015-05-28 08:07:53] Fox.WARNING: E_WARNING: chown(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":392} []
+[2015-05-28 08:07:53] Fox.WARNING: E_WARNING: chgrp(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":403} []
+[2015-05-28 08:07:53] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":380} []
+[2015-05-28 08:07:53] Fox.ERROR: API [GET]:/Admin/clearCache, Params:Array
+(
+)
+, InputData:  - Permission denied for data/config.php [] []
+[2015-05-28 08:07:53] Fox.ERROR: Display Error: Permission denied for data/config.php, Code: 500 URL: /api/v1/Admin/clearCache [] []
+[2015-05-28 08:07:57] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":370} []
+[2015-05-28 08:07:57] Fox.WARNING: E_WARNING: chown(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":392} []
+[2015-05-28 08:07:57] Fox.WARNING: E_WARNING: chgrp(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":403} []
+[2015-05-28 08:07:57] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":380} []
+[2015-05-28 08:07:57] Fox.ERROR: API [GET]:/Admin/clearCache, Params:Array
+(
+)
+, InputData:  - Permission denied for data/config.php [] []
+[2015-05-28 08:07:57] Fox.ERROR: Display Error: Permission denied for data/config.php, Code: 500 URL: /api/v1/Admin/clearCache [] []
+[2015-05-28 08:07:59] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":370} []
+[2015-05-28 08:07:59] Fox.WARNING: E_WARNING: chown(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":392} []
+[2015-05-28 08:07:59] Fox.WARNING: E_WARNING: chgrp(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":403} []
+[2015-05-28 08:07:59] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":380} []
+[2015-05-28 08:07:59] Fox.ERROR: API [GET]:/Admin/clearCache, Params:Array
+(
+)
+, InputData:  - Permission denied for data/config.php [] []
+[2015-05-28 08:07:59] Fox.ERROR: Display Error: Permission denied for data/config.php, Code: 500 URL: /api/v1/Admin/clearCache [] []
+[2015-05-28 08:08:48] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":370} []
+[2015-05-28 08:08:48] Fox.WARNING: E_WARNING: chown(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":392} []
+[2015-05-28 08:08:48] Fox.WARNING: E_WARNING: chgrp(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":403} []
+[2015-05-28 08:08:48] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":380} []
+[2015-05-28 08:08:59] Fox.ERROR: API [GET]:/Admin/clearCache, Params:Array
+(
+)
+, InputData:  - Permission denied for data/config.php [] []
+[2015-05-28 08:08:59] Fox.ERROR: Display Error: Permission denied for data/config.php, Code: 500 URL: /api/v1/Admin/clearCache [] []
+[2015-05-28 08:10:50] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":370} []
+[2015-05-28 08:10:50] Fox.WARNING: E_WARNING: chown(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":392} []
+[2015-05-28 08:10:50] Fox.WARNING: E_WARNING: chgrp(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":403} []
+[2015-05-28 08:10:50] Fox.WARNING: E_WARNING: chmod(): Operation not permitted {"file":"/home/wwwroot/cc2crm/application/Fox/Core/Utils/File/Permission.php","line":380} []
+[2015-05-28 08:11:09] Fox.ERROR: API [GET]:/Admin/clearCache, Params:Array
+(
+)
+, InputData:  - Permission denied for data/config.php [] []
+[2015-05-28 08:11:09] Fox.ERROR: Display Error: Permission denied for data/config.php, Code: 500 URL: /api/v1/Admin/clearCache [] []

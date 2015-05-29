@@ -1,26 +1,26 @@
 /************************************************************************
- * This file is part of EspoCRM.
+ * This file is part of FoxCRM.
  *
- * EspoCRM - Open Source CRM application.
+ * FoxCRM - Open Source CRM application.
  * Copyright (C) 2014-2015 Yuri Kuznetsov, Taras Machyshyn, Oleksiy Avramenko
  * Website: http://www.espocrm.com
  *
- * EspoCRM is free software: you can redistribute it and/or modify
+ * FoxCRM is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * EspoCRM is distributed in the hope that it will be useful,
+ * FoxCRM is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with EspoCRM. If not, see http://www.gnu.org/licenses/.
+ * along with FoxCRM. If not, see http://www.gnu.org/licenses/.
  ************************************************************************/
-var Espo = Espo || {};
+var Fox = Fox || {};
 
-Espo.App = function (options, callback) {
+Fox.App = function (options, callback) {
     var options = options || {};
 
     this.useCache = options.useCache || this.useCache;
@@ -29,7 +29,7 @@ Espo.App = function (options, callback) {
     this.controllers = {};
 
     if (this.useCache) {
-        this.cache = new Espo.Cache();
+        this.cache = new Fox.Cache();
         if (options.cacheTimestamp) {
             this.cache.handleActuality(options.cacheTimestamp);
         } else {
@@ -37,33 +37,33 @@ Espo.App = function (options, callback) {
         }
     }
 
-    this.storage = new Espo.Storage();
+    this.storage = new Fox.Storage();
 
-    this.loader = Espo.loader;
+    this.loader = Fox.loader;
     this.loader.cache = this.cache;
 
     this._setupAjax();
 
-    this.settings = new Espo['Models.Settings'](null, {cache: this.cache});
-    this.language = new Espo.Language(this.cache);
-    this.metadata = new Espo.Metadata(this.cache);
-    this.fieldManager = new Espo.FieldManager();
+    this.settings = new Fox['Models.Settings'](null, {cache: this.cache});
+    this.language = new Fox.Language(this.cache);
+    this.metadata = new Fox.Metadata(this.cache);
+    this.fieldManager = new Fox.FieldManager();
 
 
     var proceed = function () {
-        this.user = new Espo['Models.User']();
-        this.preferences = new Espo['Models.Preferences']();
+        this.user = new Fox['Models.User']();
+        this.preferences = new Fox['Models.Preferences']();
         this.preferences.settings = this.settings;
-        this.acl = new Espo.Acl(this.user);
+        this.acl = new Fox.Acl(this.user);
 
-        this._modelFactory = new Espo.ModelFactory(this.loader, this.metadata, this.user);
-        this._collectionFactory = new Espo.CollectionFactory(this.loader, this._modelFactory);
+        this._modelFactory = new Fox.ModelFactory(this.loader, this.metadata, this.user);
+        this._collectionFactory = new Fox.CollectionFactory(this.loader, this._modelFactory);
 
         this._initDateTime();
         this._initView();
         this._initBaseController();
 
-        this._preLoader = new Espo.PreLoader(this.cache, this._viewFactory);
+        this._preLoader = new Fox.PreLoader(this.cache, this._viewFactory);
 
         this._preLoad(function () {
             callback.call(this, this);
@@ -83,7 +83,7 @@ Espo.App = function (options, callback) {
     this.language.load(handleCallback);
 }
 
-_.extend(Espo.App.prototype, {
+_.extend(Fox.App.prototype, {
 
     useCache: false,
 
@@ -149,7 +149,7 @@ _.extend(Espo.App.prototype, {
     },
 
     _initRouter: function () {
-        this.router = new Espo.Router();
+        this.router = new Fox.Router();
         this._viewHelper.router = this.router;
         this.baseController._router = this.router;
         this.router.confirmLeaveOutMessage = this.language.translate('confirmLeaveOutMessage', 'messages');
@@ -186,7 +186,7 @@ _.extend(Espo.App.prototype, {
     },
 
     _initBaseController: function () {
-        this.baseController = new Espo['Controllers.Base']({}, this.getControllerInjection());
+        this.baseController = new Fox['Controllers.Base']({}, this.getControllerInjection());
         this._viewHelper.baseController = this.baseController;
     },
 
@@ -217,7 +217,7 @@ _.extend(Espo.App.prototype, {
                 var className = this.metadata.get('clientDefs.' + name + '.controller');
                 if (!className) {
                     var module = this.metadata.get('scopes.' + name + '.module');
-                    className = Espo.Utils.composeClassName(module, name, 'Controllers');
+                    className = Fox.Utils.composeClassName(module, name, 'Controllers');
                 }
 
                 this.loader.load(className, function (controllerClass) {
@@ -241,15 +241,15 @@ _.extend(Espo.App.prototype, {
     },
 
     _initDateTime: function () {
-        this.dateTime = new Espo.DateTime();
+        this.dateTime = new Fox.DateTime();
         this._modelFactory.dateTime = this.dateTime;
         this.dateTime.setSettingsAndPreferences(this.settings, this.preferences);
     },
 
     _initView: function () {
 
-        var helper = this._viewHelper = new Espo.ViewHelper();
-        helper.layoutManager = new Espo.LayoutManager({cache: this.cache});
+        var helper = this._viewHelper = new Fox.ViewHelper();
+        helper.layoutManager = new Fox.LayoutManager({cache: this.cache});
         helper.settings = this.settings;
         helper.user = this.user;
         helper.preferences = this.preferences;
@@ -265,7 +265,7 @@ _.extend(Espo.App.prototype, {
         helper.storage = this.storage;
 
         this._viewLoader = function (viewName, callback) {
-            this.loader.load(Espo.Utils.composeViewClassName(viewName), callback);
+            this.loader.load(Fox.Utils.composeViewClassName(viewName), callback);
         }.bind(this);
 
         var self = this;
@@ -434,11 +434,11 @@ _.extend(Espo.App.prototype, {
         $.ajaxSetup({
             beforeSend: function (xhr, options) {
                 if (!options.local && self.url) {
-                    this.url = Espo.Utils.trimSlash(self.url) + '/' + this.url;
+                    this.url = Fox.Utils.trimSlash(self.url) + '/' + this.url;
                 }
                 if (self.auth !== null) {
                     xhr.setRequestHeader('Authorization', 'Basic ' + self.auth);
-                    xhr.setRequestHeader('Espo-Authorization', self.auth);
+                    xhr.setRequestHeader('Fox-Authorization', self.auth);
                 }
             },
             dataType: 'json',
@@ -453,16 +453,16 @@ _.extend(Espo.App.prototype, {
             switch (xhr.status) {
                 case 0:
                     if (xhr.statusText == 'timeout') {
-                        Espo.Ui.error(self.language.translate('Timeout'));
+                        Fox.Ui.error(self.language.translate('Timeout'));
                     }
                     break;
                 case 200:
-                    Espo.Ui.error(self.language.translate('Bad server response'));
+                    Fox.Ui.error(self.language.translate('Bad server response'));
                     console.error('Bad server response: ' + xhr.responseText);
                     break;
                 case 401:
                     if (!options.login) {
-                        Espo.Ui.error(self.language.translate('Auth error'));
+                        Fox.Ui.error(self.language.translate('Auth error'));
                         if (self.auth) {
                             self.logout();
                         }
@@ -472,18 +472,18 @@ _.extend(Espo.App.prototype, {
                     if (options.main) {
                         self.baseController.error403();
                     } else {
-                        Espo.Ui.error(self.language.translate('Error') + ' ' + xhr.status);
+                        Fox.Ui.error(self.language.translate('Error') + ' ' + xhr.status);
                     }
                     break;
                 case 404:
                     if (options.main) {
                         self.baseController.error404();
                     } else {
-                        Espo.Ui.error(self.language.translate('Error') + ' ' + xhr.status);
+                        Fox.Ui.error(self.language.translate('Error') + ' ' + xhr.status);
                     }
                     break;
                 default:
-                    Espo.Ui.error(self.language.translate('Error') + ' ' + xhr.status);
+                    Fox.Ui.error(self.language.translate('Error') + ' ' + xhr.status);
             }
 
             var statusReason = xhr.getResponseHeader('X-Status-Reason');

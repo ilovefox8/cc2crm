@@ -1,25 +1,25 @@
 /************************************************************************
- * This file is part of EspoCRM.
+ * This file is part of FoxCRM.
  *
- * EspoCRM - Open Source CRM application.
+ * FoxCRM - Open Source CRM application.
  * Copyright (C) 2014-2015 Yuri Kuznetsov, Taras Machyshyn, Oleksiy Avramenko
  * Website: http://www.espocrm.com
  *
- * EspoCRM is free software: you can redistribute it and/or modify
+ * FoxCRM is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * EspoCRM is distributed in the hope that it will be useful,
+ * FoxCRM is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with EspoCRM. If not, see http://www.gnu.org/licenses/.
+ * along with FoxCRM. If not, see http://www.gnu.org/licenses/.
  ************************************************************************/
 
-Espo.define('Views.Modal', 'View', function (Dep) {
+Fox.define('Views.Modal', 'View', function (Dep) {
 
     return Dep.extend({
 
@@ -50,8 +50,8 @@ Espo.define('Views.Modal', 'View', function (Dep) {
             this.options = this.options || {};
             this.options.el = this.containerSelector;
 
-            this.buttonList = Espo.Utils.clone(this.buttonList);
-            this.buttons = Espo.Utils.clone(this.buttons);
+            this.buttonList = Fox.Utils.clone(this.buttonList);
+            this.buttons = Fox.Utils.clone(this.buttons);
 
             this.on('render', function () {
                 $(containerSelector).remove();
@@ -60,7 +60,7 @@ Espo.define('Views.Modal', 'View', function (Dep) {
                 var buttonListExt = [];
 
                 this.buttons.forEach(function (item) {
-                    var o = Espo.Utils.clone(item);
+                    var o = Fox.Utils.clone(item);
                     if (!('text' in o) && ('label' in o)) {
                         o.text = this.getLanguage().translate(o.label);
                     }
@@ -84,12 +84,12 @@ Espo.define('Views.Modal', 'View', function (Dep) {
                             o.text = this.translate(o.name, 'modalActions', this.scope);
                         }
                     }
-                    o.onClick = o.onClick || this['action' + Espo.Utils.upperCaseFirst(o.name)].bind(this);
+                    o.onClick = o.onClick || this['action' + Fox.Utils.upperCaseFirst(o.name)].bind(this);
 
                     buttonListExt.push(o);
                 }, this);
 
-                this.dialog = new Espo.Ui.Dialog({
+                this.dialog = new Fox.Ui.Dialog({
                     backdrop: this.backdrop,
                     header: this.header,
                     container: containerSelector,

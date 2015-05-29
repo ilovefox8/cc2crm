@@ -222,7 +222,7 @@ return array (
       array (
         0 => 
         array (
-          'name' => 'My Espo',
+          'name' => 'My Fox',
           'layout' => 
           array (
             0 => 
@@ -4047,7 +4047,7 @@ return array (
         'outboundEmailFromName' => 
         array (
           'type' => 'varchar',
-          'default' => 'EspoCRM',
+          'default' => 'FoxCRM',
           'required' => true,
         ),
         'outboundEmailFromAddress' => 
@@ -4147,10 +4147,10 @@ return array (
           'type' => 'enum',
           'options' => 
           array (
-            0 => 'Espo',
+            0 => 'Fox',
             1 => 'LDAP',
           ),
-          'default' => 'Espo',
+          'default' => 'Fox',
         ),
         'ldapHost' => 
         array (
@@ -4230,7 +4230,7 @@ return array (
         array (
           'type' => 'bool',
         ),
-        'ldapCreateEspoUser' => 
+        'ldapCreateFoxUser' => 
         array (
           'type' => 'bool',
           'default' => true,
@@ -5482,7 +5482,7 @@ return array (
           'type' => 'varchar',
           'required' => true,
           'maxLength' => 36,
-          'default' => 'Espo',
+          'default' => 'Fox',
         ),
         'createdAt' => 
         array (
@@ -6155,9 +6155,9 @@ return array (
           'type' => 'enum',
           'options' => 
           array (
-            0 => 'Espo',
+            0 => 'Fox',
           ),
-          'default' => 'Espo',
+          'default' => 'Fox',
         ),
         'type' => 
         array (

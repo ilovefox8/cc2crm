@@ -28,7 +28,7 @@ return array (
   array (
     'route' => '/',
     'method' => 'get',
-    'params' => '<h1>EspoCRM REST API</h1>',
+    'params' => '<h1>FoxCRM REST API</h1>',
   ),
   3 => 
   array (

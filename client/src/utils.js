@@ -1,26 +1,26 @@
 /************************************************************************
- * This file is part of EspoCRM.
+ * This file is part of FoxCRM.
  *
- * EspoCRM - Open Source CRM application.
+ * FoxCRM - Open Source CRM application.
  * Copyright (C) 2014-2015 Yuri Kuznetsov, Taras Machyshyn, Oleksiy Avramenko
  * Website: http://www.espocrm.com
  *
- * EspoCRM is free software: you can redistribute it and/or modify
+ * FoxCRM is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * EspoCRM is distributed in the hope that it will be useful,
+ * FoxCRM is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with EspoCRM. If not, see http://www.gnu.org/licenses/.
+ * along with FoxCRM. If not, see http://www.gnu.org/licenses/.
  ************************************************************************/
-(function (Espo, _) {
+(function (Fox, _) {
 
-    Espo.Utils = {
+    Fox.Utils = {
 
         checkActionAccess: function (acl, obj, item) {
             var hasAccess = true;
@@ -51,13 +51,13 @@
             switch (p) {
                 case 'c-h':
                 case 'C-h':
-                    result = Espo.Utils.camelCaseToHyphen(string);
+                    result = Fox.Utils.camelCaseToHyphen(string);
                     break;
                 case 'h-c':
-                    result = Espo.Utils.hyphenToCamelCase(string);
+                    result = Fox.Utils.hyphenToCamelCase(string);
                     break;
                 case 'h-C':
-                    result = Espo.Utils.hyphenToUpperCamelCase(string);
+                    result = Fox.Utils.hyphenToUpperCamelCase(string);
                     break;
             }
             return result;
@@ -71,16 +71,16 @@
         },
 
         clone: function (obj) {
-            if (!Espo.Utils.isObject(obj)) {
+            if (!Fox.Utils.isObject(obj)) {
                 return obj;
             }
             return _.isArray(obj) ? obj.slice() : _.extend({}, obj);
         },
 
         cloneDeep: function (data) {
-            data = Espo.Utils.clone(data);
+            data = Fox.Utils.clone(data);
 
-            if (Espo.Utils.isObject(data) || _.isArray(data)) {
+            if (Fox.Utils.isObject(data) || _.isArray(data)) {
                 for (var i in data) {
                     data[i] = this.cloneDeep(data[i]);
                 }
@@ -115,7 +115,7 @@
         },
 
         toDom: function (string) {
-            return Espo.Utils.convert(string, 'c-h').split('.').join('-');
+            return Fox.Utils.convert(string, 'c-h').split('.').join('-');
         },
 
         lowerCaseFirst: function (string) {
@@ -161,5 +161,5 @@
         }
     };
 
-}).call(this, Espo, _);
+}).call(this, Fox, _);
 

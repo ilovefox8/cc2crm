@@ -1,0 +1,2 @@
+id;name;website;emailAddress;phoneNumber;type;industry;sicCode;billingAddressStreet;billingAddressCity;billingAddressState;billingAddressCountry;billingAddressPostalCode;shippingAddressStreet;shippingAddressCity;shippingAddressState;shippingAddressCountry;shippingAddressPostalCode;description;campaignId;assignedUserId;assignedUserName
+5562bae142e02936b;test;;;;;;;;;;;;;;;;;;;1;Admin

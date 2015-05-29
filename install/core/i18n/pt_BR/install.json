@@ -1,6 +1,6 @@
 {
   "labels": {
-    "Main page title": "Bem vindo ao EspoCRM",
+    "Main page title": "Bem vindo ao FoxCRM",
     "Main page header": "",
     "Start page title": "Contrato de Licença",
     "Step1 page title": "Contrato de Licença",
@@ -12,9 +12,9 @@
     "Step5 page title": "Configurações SMTP para envio de e-mails",
     "Errors page title": "Erros",
     "Finish page title": "Instalação completa",
-    "Congratulation! Welcome to EspoCRM!": "Parabéns! O EspoCRM foi instalado com sucesso.",
+    "Congratulation! Welcome to FoxCRM!": "Parabéns! O FoxCRM foi instalado com sucesso.",
     "More Information": "For more information, please visit our {BLOG}, follow us on {TWITTER}.<br><br>If you have any suggestions or questions, please ask on the {FORUM}.",
-    "share": "If you like EspoCRM, share it with your friends. Let them know about this great product.",
+    "share": "If you like FoxCRM, share it with your friends. Let them know about this great product.",
     "blog": "blog",
     "twitter": "twitter",
     "forum": "forum",
@@ -28,7 +28,7 @@
     "Start": "Iniciar",
     "Back": "Voltar",
     "Next": "Avançar",
-    "Go to EspoCRM": "Ir para o EspoCRM",
+    "Go to FoxCRM": "Ir para o FoxCRM",
     "Re-check": "Verificar novamente",
     "Version": "Version",
     "Test settings": "Testar Conexão",
@@ -79,8 +79,8 @@
   "messages": {
     "Bad init Permission": "Permission denied for \"{*}\" directory. Please set 775 for \"{*}\" or just execute this command in the terminal <pre><b>{C}</b></pre>\n\tOperation not permitted? Try this one: {CSU}",
     "Some errors occurred!": "Some errors occurred!",
-    "phpVersion": "Your PHP version is not supported by EspoCRM, please update to PHP {minVersion} at least",
-    "MySQLVersion": "Your MySQL version is not supported by EspoCRM, please update to MySQL {minVersion} at least",
+    "phpVersion": "Your PHP version is not supported by FoxCRM, please update to PHP {minVersion} at least",
+    "MySQLVersion": "Your MySQL version is not supported by FoxCRM, please update to MySQL {minVersion} at least",
     "The PHP extension was not found...": "The <b>{extName}</b> PHP extension was not found...",
     "All Settings correct": "All Settings are correct",
     "Failed to connect to database": "Failed to connect to database",
@@ -107,7 +107,7 @@
     "1045": "Access denied for user",
     "extension": "{0} extension is missing",
     "option": "Recommended value is {0}",
-    "mysqlSettingError": "EspoCRM requires the MySQL setting \"{NAME}\" to be set to {VALUE}"
+    "mysqlSettingError": "FoxCRM requires the MySQL setting \"{NAME}\" to be set to {VALUE}"
   },
   "options": {
     "db driver": {
@@ -124,10 +124,10 @@
       }
     },
     "modRewriteHelp": {
-      "apache": "API Error: EspoCRM API unavailable.<br> Possible problems: disabled \"mod_rewrite\" in Apache server, disabled .htaccess support or  RewriteBase issue.<br>Do only necessary steps. After each step check if the issue is solved.",
-      "nginx": "API Error: EspoCRM API unavailable.<br> Add this code to your Nginx Host Config (inside \"server\" block):<br>\n<pre>\n{0}\n</pre>",
-      "microsoft-iis": "API Error: EspoCRM API unavailable.<br> Possible problem: disabled \"URL Rewrite\". Please check and enable \"URL Rewrite\" Module in IIS server",
-      "default": "API Error: EspoCRM API unavailable.<br> Possible problem: disabled Rewrite Module. Please check and enable Rewrite Module in your server (e.g. mod_rewrite in Apache) and .htaccess support."
+      "apache": "API Error: FoxCRM API unavailable.<br> Possible problems: disabled \"mod_rewrite\" in Apache server, disabled .htaccess support or  RewriteBase issue.<br>Do only necessary steps. After each step check if the issue is solved.",
+      "nginx": "API Error: FoxCRM API unavailable.<br> Add this code to your Nginx Host Config (inside \"server\" block):<br>\n<pre>\n{0}\n</pre>",
+      "microsoft-iis": "API Error: FoxCRM API unavailable.<br> Possible problem: disabled \"URL Rewrite\". Please check and enable \"URL Rewrite\" Module in IIS server",
+      "default": "API Error: FoxCRM API unavailable.<br> Possible problem: disabled Rewrite Module. Please check and enable Rewrite Module in your server (e.g. mod_rewrite in Apache) and .htaccess support."
     }
   }
 }

@@ -1,22 +1,22 @@
 /************************************************************************
- * This file is part of EspoCRM.
+ * This file is part of FoxCRM.
  *
- * EspoCRM - Open Source CRM application.
+ * FoxCRM - Open Source CRM application.
  * Copyright (C) 2014-2015 Yuri Kuznetsov, Taras Machyshyn, Oleksiy Avramenko
  * Website: http://www.espocrm.com
  *
- * EspoCRM is free software: you can redistribute it and/or modify
+ * FoxCRM is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * EspoCRM is distributed in the hope that it will be useful,
+ * FoxCRM is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with EspoCRM. If not, see http://www.gnu.org/licenses/.
+ * along with FoxCRM. If not, see http://www.gnu.org/licenses/.
  ************************************************************************/
 var InstallScript = function(opt) {
 	this.reChecking = false;
@@ -350,7 +350,7 @@ InstallScript.prototype.finish = function() {
 
 	var nextAction = '';
 	$("#start").click(function(){
-		self.goToEspo();
+		self.goToFox();
 	})
 }
 
@@ -714,7 +714,7 @@ InstallScript.prototype.callbackChecking = function(data) {
 	}
 }
 
-InstallScript.prototype.getEspoPath = function(onlyPath) {
+InstallScript.prototype.getFoxPath = function(onlyPath) {
 
 	onlyPath = typeof onlyPath !== 'undefined' ? onlyPath : false;
 
@@ -734,15 +734,15 @@ InstallScript.prototype.getModRewriteErrorMesssage = function() {
 	if (typeof(this.langs) !== 'undefined') {
 		message = (typeof(this.langs['options']['modRewriteHelp'][this.serverType]) !== 'undefined')? this.langs['options']['modRewriteHelp'][this.serverType] : this.langs['options']['modRewriteHelp']['default'];
 		message += (typeof(this.langs['options']['modRewriteInstruction'][this.serverType]) !== 'undefined' && typeof(this.langs['options']['modRewriteInstruction'][this.serverType][this.OS]) !== 'undefined') ? this.langs['options']['modRewriteInstruction'][this.serverType][this.OS] : '';
-		message = message.replace("{ESPO_PATH}", this.getEspoPath(true)).replace("{API_PATH}", this.apiPath).replace("{API_PATH}", this.apiPath);
+		message = message.replace("{ESPO_PATH}", this.getFoxPath(true)).replace("{API_PATH}", this.apiPath).replace("{API_PATH}", this.apiPath);
 	}
 
 	return message;
 }
 
-InstallScript.prototype.goToEspo = function() {
+InstallScript.prototype.goToFox = function() {
 
-	var location = this.getEspoPath();
+	var location = this.getFoxPath();
 	window.location.replace(location);
 }
 

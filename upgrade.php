@@ -11,7 +11,7 @@ include "bootstrap.php";
 $packageName = isset($_SERVER['argv'][1]) ? trim($_SERVER['argv'][1]) : '';
 
 if ($packageName == 'version' || $packageName == '-v') {
-    $app = new \Espo\Core\Application();
+    $app = new \Fox\Core\Application();
     die("Current version is " . $app->getContainer()->get('config')->get('version') . ".\n");
 }
 
@@ -28,7 +28,7 @@ if (!isset($pathInfo['extension']) || $pathInfo['extension'] != 'zip' || !is_fil
     die("Unsupported package.\n");
 }
 
-$app = new \Espo\Core\Application();
+$app = new \Fox\Core\Application();
 
 $config = $app->getContainer()->get('config');
 $entityManager = $app->getContainer()->get('entityManager');
@@ -36,7 +36,7 @@ $entityManager = $app->getContainer()->get('entityManager');
 $user = $entityManager->getEntity('User', 'system');
 $app->getContainer()->setUser($user);
 
-$upgradeManager = new \Espo\Core\UpgradeManager($app->getContainer());
+$upgradeManager = new \Fox\Core\UpgradeManager($app->getContainer());
 
 echo "Start upgrade process. Current version is " . $config->get('version') . "\n";
 
@@ -51,7 +51,7 @@ try {
 }
 
 try {
-    $app = new \Espo\Core\Application();
+    $app = new \Fox\Core\Application();
     $app->runRebuild();
 } catch (\Exception $e) {}
 

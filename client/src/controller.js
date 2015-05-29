@@ -1,28 +1,28 @@
 /************************************************************************
- * This file is part of EspoCRM.
+ * This file is part of FoxCRM.
  *
- * EspoCRM - Open Source CRM application.
+ * FoxCRM - Open Source CRM application.
  * Copyright (C) 2014-2015 Yuri Kuznetsov, Taras Machyshyn, Oleksiy Avramenko
  * Website: http://www.espocrm.com
  *
- * EspoCRM is free software: you can redistribute it and/or modify
+ * FoxCRM is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * EspoCRM is distributed in the hope that it will be useful,
+ * FoxCRM is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with EspoCRM. If not, see http://www.gnu.org/licenses/.
+ * along with FoxCRM. If not, see http://www.gnu.org/licenses/.
  ************************************************************************/
 
 /**
  * Controller. Views, Models and Collections are created here.
 */
-Espo.Controller = function (params, injections) {
+Fox.Controller = function (params, injections) {
     this.initialize();
     this.params = params || {};
     this.viewFactory = injections.viewFactory;
@@ -42,7 +42,7 @@ Espo.Controller = function (params, injections) {
     this.set('masterRendered', false);
 };
 
-_.extend(Espo.Controller.prototype, {
+_.extend(Fox.Controller.prototype, {
 
     defaultAction: 'index',
 
@@ -121,7 +121,7 @@ _.extend(Espo.Controller.prototype, {
 
     handleAccessGlobal: function () {
         if (!this.checkAccessGlobal()) {
-            throw new Espo.Exceptions.AccessDenied("Denied access to action '" + this.name + "#" + action + "'");
+            throw new Fox.Exceptions.AccessDenied("Denied access to action '" + this.name + "#" + action + "'");
         }
     },
 
@@ -137,7 +137,7 @@ _.extend(Espo.Controller.prototype, {
             } else {
                 msg = "Denied access to scope '" + this.name + "'";
             }
-            throw new Espo.Exceptions.AccessDenied(msg);
+            throw new Fox.Exceptions.AccessDenied(msg);
         }
     },
 
@@ -147,11 +147,11 @@ _.extend(Espo.Controller.prototype, {
         action = action || this.defaultAction;
         var method = action;
         if (!(method in this)) {
-            throw new Espo.Exceptions.NotFound("Action '" + this.name + "#" + action + "' is not found");
+            throw new Fox.Exceptions.NotFound("Action '" + this.name + "#" + action + "' is not found");
         }
 
-        var preMethod = 'before' + Espo.Utils.upperCaseFirst(method);
-        var postMethod = 'after' + Espo.Utils.upperCaseFirst(method);
+        var preMethod = 'before' + Fox.Utils.upperCaseFirst(method);
+        var postMethod = 'after' + Fox.Utils.upperCaseFirst(method);
 
         if (preMethod in this) {
             this[preMethod].call(this, options || {});
@@ -194,7 +194,7 @@ _.extend(Espo.Controller.prototype, {
      * Create main view in master and return it.
      * @param {String} view Name of view.
      * @param {Object} options Options for view.
-     * @return {Espo.View}
+     * @return {Fox.View}
      */
     main: function (view, options, callback) {
         var view = view || 'Base';
@@ -240,7 +240,7 @@ _.extend(Espo.Controller.prototype, {
      * Create view in the body tag.
      * @param {String} view Name of view.
      * @param {Object} options Options for view.
-     * @return {Espo.View}
+     * @return {Fox.View}
      */
     entire: function (view, options, callback) {
         var master = this.get('master');
@@ -259,6 +259,6 @@ _.extend(Espo.Controller.prototype, {
 
 }, Backbone.Events);
 
-Espo.Controller.extend = Backbone.Router.extend;
+Fox.Controller.extend = Backbone.Router.extend;
 
 

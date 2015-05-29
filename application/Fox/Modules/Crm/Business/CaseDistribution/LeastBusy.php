@@ -1,0 +1,83 @@
+<?php
+/************************************************************************
+ * This file is part of FoxCRM.
+ *
+ * FoxCRM - Open Source CRM application.
+ * Copyright (C) 2014-2015 Yuri Kuznetsov, Taras Machyshyn, Oleksiy Avramenko
+ * Website: http://www.espocrm.com
+ *
+ * FoxCRM is free software: you can redistribute it and/or modify
+ * it under the terms of the GNU General Public License as published by
+ * the Free Software Foundation, either version 3 of the License, or
+ * (at your option) any later version.
+ *
+ * FoxCRM is distributed in the hope that it will be useful,
+ * but WITHOUT ANY WARRANTY; without even the implied warranty of
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+ * GNU General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License
+ * along with FoxCRM. If not, see http://www.gnu.org/licenses/.
+ ************************************************************************/
+
+namespace Fox\Modules\Crm\Business\CaseDistribution;
+
+class LeastBusy
+{
+    protected $entityManager;
+
+    public function __construct($entityManager)
+    {
+        $this->entityManager = $entityManager;
+    }
+
+    protected function getEntityManager()
+    {
+        return $this->entityManager;
+    }
+
+    public function getUser($team, $targetUserPosition = null)
+    {
+        $params = array();
+        if (!empty($targetUserPosition)) {
+            $params['additionalColumnsConditions'] = array(
+                'role' => $targetUserPosition
+            );
+        }
+
+        $userList = $team->get('users', $params);
+
+        if (count($userList) == 0) {
+            return false;
+        }
+
+        $countHash = array();
+
+        foreach ($userList as $user) {
+            $count = $this->getEntityManager()->getRepository('Case')->where(array(
+                'assignedUserId' => $user->id,
+                'status<>' => array('Closed', 'Rejected', 'Duplicated')
+            ))->count();
+            $countHash[$user->id] = $count;
+        }
+
+        $foundUserId = false;
+        $min = false;
+        foreach ($countHash as $userId => $count) {
+            if ($min === false) {
+                $min = $count;
+                $foundUserId = $userId;
+            } else {
+                if ($count < $min) {
+                    $min = $clunt;
+                    $foundUserId = $userId;
+                }
+            }
+        }
+
+        if ($foundUserId !== false) {
+            return $this->getEntityManager()->getEntity('User', $foundUserId);
+        }
+    }
+}
+

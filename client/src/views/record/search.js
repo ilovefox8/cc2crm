@@ -1,25 +1,25 @@
 /************************************************************************
- * This file is part of EspoCRM.
+ * This file is part of FoxCRM.
  *
- * EspoCRM - Open Source CRM application.
+ * FoxCRM - Open Source CRM application.
  * Copyright (C) 2014-2015 Yuri Kuznetsov, Taras Machyshyn, Oleksiy Avramenko
  * Website: http://www.espocrm.com
  *
- * EspoCRM is free software: you can redistribute it and/or modify
+ * FoxCRM is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * EspoCRM is distributed in the hope that it will be useful,
+ * FoxCRM is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with EspoCRM. If not, see http://www.gnu.org/licenses/.
+ * along with FoxCRM. If not, see http://www.gnu.org/licenses/.
  ************************************************************************/
 
-Espo.define('Views.Record.Search', 'View', function (Dep) {
+Fox.define('Views.Record.Search', 'View', function (Dep) {
 
     return Dep.extend({
 
@@ -69,7 +69,7 @@ Espo.define('Views.Record.Search', 'View', function (Dep) {
                 return this.fields != null && this.moreFields != null;
             }.bind(this));
 
-            this.boolFilterList = Espo.Utils.clone(this.getMetadata().get('clientDefs.' + this.scope + '.boolFilterList') || []);
+            this.boolFilterList = Fox.Utils.clone(this.getMetadata().get('clientDefs.' + this.scope + '.boolFilterList') || []);
 
 
             this._helper.layoutManager.get(this.scope, 'filters', function (list) {
@@ -77,7 +77,7 @@ Espo.define('Views.Record.Search', 'View', function (Dep) {
                 this.tryReady();
             }.bind(this));
 
-            this.presetFilterList = Espo.Utils.clone(this.getMetadata().get('clientDefs.' + this.scope + '.filterList') || []);
+            this.presetFilterList = Fox.Utils.clone(this.getMetadata().get('clientDefs.' + this.scope + '.filterList') || []);
             ((this.getPreferences().get('presetFilters') || {})[this.scope] || []).forEach(function (item) {
                 this.presetFilterList.push(item);
             }, this);
@@ -521,7 +521,7 @@ Espo.define('Views.Record.Search', 'View', function (Dep) {
             var data = {};
             this.getPresetFilterList().forEach(function (item) {
                 if (item.name == this.presetName) {
-                    data = Espo.Utils.clone(item.data || {});
+                    data = Fox.Utils.clone(item.data || {});
                     return;
                 }
             }, this);
@@ -567,11 +567,11 @@ Espo.define('Views.Record.Search', 'View', function (Dep) {
             }
 
             if (this.presetName) {
-                this.advanced = _.extend(Espo.Utils.clone(this.getPresetData()), searchData.advanced);
+                this.advanced = _.extend(Fox.Utils.clone(this.getPresetData()), searchData.advanced);
 
                 this.primary = this.getPrimaryFilterName();
             } else {
-                this.advanced = Espo.Utils.clone(searchData.advanced);
+                this.advanced = Fox.Utils.clone(searchData.advanced);
             }
             this.bool = searchData.bool;
         },

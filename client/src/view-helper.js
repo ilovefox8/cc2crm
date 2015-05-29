@@ -1,27 +1,27 @@
 /************************************************************************
- * This file is part of EspoCRM.
+ * This file is part of FoxCRM.
  *
- * EspoCRM - Open Source CRM application.
+ * FoxCRM - Open Source CRM application.
  * Copyright (C) 2014-2015 Yuri Kuznetsov, Taras Machyshyn, Oleksiy Avramenko
  * Website: http://www.espocrm.com
  *
- * EspoCRM is free software: you can redistribute it and/or modify
+ * FoxCRM is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
  *
- * EspoCRM is distributed in the hope that it will be useful,
+ * FoxCRM is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License
- * along with EspoCRM. If not, see http://www.gnu.org/licenses/.
+ * along with FoxCRM. If not, see http://www.gnu.org/licenses/.
  ************************************************************************/
 
-(function (Espo, _, Handlebars) {
+(function (Fox, _, Handlebars) {
 
-    Espo.ViewHelper = function (options) {
+    Fox.ViewHelper = function (options) {
         this.urlRegex = /(^|[^\[])(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/ig;
         this._registerHandlebarsHelpers();
 
@@ -42,7 +42,7 @@
 
     }
 
-    _.extend(Espo.ViewHelper.prototype, {
+    _.extend(Fox.ViewHelper.prototype, {
 
         layoutManager: null,
 
@@ -176,11 +176,11 @@
             });
 
             Handlebars.registerHelper('hyphen', function (string) {
-                return Espo.Utils.convert(string, 'c-h');
+                return Fox.Utils.convert(string, 'c-h');
             });
 
             Handlebars.registerHelper('toDom', function (string) {
-                return Espo.Utils.toDom(string);
+                return Fox.Utils.toDom(string);
             });
 
             Handlebars.registerHelper('breaklines', function (text) {
@@ -269,4 +269,4 @@
     });
 
 
-}).call(this, Espo, _, Handlebars);
+}).call(this, Fox, _, Handlebars);
